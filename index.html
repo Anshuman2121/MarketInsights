@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Data Table</title>
+    <!-- Add Bootstrap CSS for table styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add DataTables CSS -->
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Stock Data Table</h1>
+        <!-- Display the DataFrame as an HTML table -->
+        <table class="table table-striped" id="stock-table">
+            <thead>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Current Price</th>
+                    <th>1Y High % Diff</th>
+                    <th>2Y High % Diff</th>
+                    <th>5Y High % Diff</th>
+                    <th>1Y Low % Diff</th>
+                    <th>2Y Low % Diff</th>
+                    <th>5Y Low % Diff</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>ADANIENT.NS</td>
+                    <td>2,416</td>
+                    <td>-42.27</td>
+                    <td>-42.27</td>
+                    <td>-42.27</td>
+                    <td>137.72</td>
+                    <td>137.72</td>
+                    <td>2305.68</td>
+                </tr>
+                
+                <tr>
+                    <td>ADANIPORTS.NS</td>
+                    <td>728</td>
+                    <td>-26.26</td>
+                    <td>-26.26</td>
+                    <td>-26.26</td>
+                    <td>84.37</td>
+                    <td>84.37</td>
+                    <td>263.86</td>
+                </tr>
+                
+                <tr>
+                    <td>APOLLOHOSP.NS</td>
+                    <td>5,204</td>
+                    <td>-2.24</td>
+                    <td>-11.95</td>
+                    <td>-11.95</td>
+                    <td>30.70</td>
+                    <td>55.47</td>
+                    <td>481.52</td>
+                </tr>
+                
+                <tr>
+                    <td>ASIANPAINT.NS</td>
+                    <td>3,517</td>
+                    <td>-1.02</td>
+                    <td>-1.02</td>
+                    <td>-1.02</td>
+                    <td>31.84</td>
+                    <td>38.52</td>
+                    <td>226.17</td>
+                </tr>
+                
+                <tr>
+                    <td>AXISBANK.NS</td>
+                    <td>971</td>
+                    <td>-1.83</td>
+                    <td>-1.83</td>
+                    <td>-1.83</td>
+                    <td>38.64</td>
+                    <td>57.67</td>
+                    <td>240.83</td>
+                </tr>
+                
+                <tr>
+                    <td>BAJAJ-AUTO.NS</td>
+                    <td>4,862</td>
+                    <td>-2.65</td>
+                    <td>-2.65</td>
+                    <td>-2.65</td>
+                    <td>49.41</td>
+                    <td>77.26</td>
+                    <td>210.36</td>
+                </tr>
+                
+                <tr>
+                    <td>BAJAJFINSV.NS</td>
+                    <td>1,632</td>
+                    <td>-11.36</td>
+                    <td>-15.39</td>
+                    <td>-15.39</td>
+                    <td>34.53</td>
+                    <td>52.38</td>
+                    <td>310.40</td>
+                </tr>
+                
+                <tr>
+                    <td>BAJFINANCE.NS</td>
+                    <td>7,581</td>
+                    <td>-5.23</td>
+                    <td>-5.23</td>
+                    <td>-5.23</td>
+                    <td>39.40</td>
+                    <td>47.03</td>
+                    <td>331.14</td>
+                </tr>
+                
+                <tr>
+                    <td>BHARTIARTL.NS</td>
+                    <td>886</td>
+                    <td>-1.19</td>
+                    <td>-1.19</td>
+                    <td>-1.19</td>
+                    <td>33.99</td>
+                    <td>69.95</td>
+                    <td>254.21</td>
+                </tr>
+                
+                <tr>
+                    <td>BPCL.NS</td>
+                    <td>390</td>
+                    <td>-1.82</td>
+                    <td>-13.27</td>
+                    <td>-13.27</td>
+                    <td>35.62</td>
+                    <td>35.62</td>
+                    <td>121.45</td>
+                </tr>
+                
+                <tr>
+                    <td>BRITANNIA.NS</td>
+                    <td>5,047</td>
+                    <td>-4.24</td>
+                    <td>-4.24</td>
+                    <td>-4.24</td>
+                    <td>44.53</td>
+                    <td>73.90</td>
+                    <td>166.23</td>
+                </tr>
+                
+                <tr>
+                    <td>CIPLA.NS</td>
+                    <td>1,048</td>
+                    <td>-10.04</td>
+                    <td>-10.04</td>
+                    <td>-10.04</td>
+                    <td>25.14</td>
+                    <td>26.05</td>
+                    <td>204.00</td>
+                </tr>
+                
+                <tr>
+                    <td>COALINDIA.NS</td>
+                    <td>229</td>
+                    <td>-7.62</td>
+                    <td>-7.62</td>
+                    <td>-7.62</td>
+                    <td>30.12</td>
+                    <td>113.55</td>
+                    <td>184.29</td>
+                </tr>
+                
+                <tr>
+                    <td>DIVISLAB.NS</td>
+                    <td>3,688</td>
+                    <td>-6.82</td>
+                    <td>-31.49</td>
+                    <td>-31.49</td>
+                    <td>35.10</td>
+                    <td>35.10</td>
+                    <td>258.73</td>
+                </tr>
+                
+                <tr>
+                    <td>DRREDDY.NS</td>
+                    <td>5,288</td>
+                    <td>-1.97</td>
+                    <td>-1.97</td>
+                    <td>-2.90</td>
+                    <td>33.34</td>
+                    <td>47.84</td>
+                    <td>195.21</td>
+                </tr>
+                
+                <tr>
+                    <td>EICHERMOT.NS</td>
+                    <td>3,315</td>
+                    <td>-14.76</td>
+                    <td>-14.76</td>
+                    <td>-14.76</td>
+                    <td>16.91</td>
+                    <td>54.55</td>
+                    <td>169.74</td>
+                </tr>
+                
+                <tr>
+                    <td>GRASIM.NS</td>
+                    <td>1,804</td>
+                    <td>-1.90</td>
+                    <td>-6.20</td>
+                    <td>-6.20</td>
+                    <td>24.23</td>
+                    <td>41.80</td>
+                    <td>374.20</td>
+                </tr>
+                
+                <tr>
+                    <td>HCLTECH.NS</td>
+                    <td>1,115</td>
+                    <td>-6.45</td>
+                    <td>-11.52</td>
+                    <td>-11.52</td>
+                    <td>32.22</td>
+                    <td>34.42</td>
+                    <td>235.20</td>
+                </tr>
+                
+                <tr>
+                    <td>HDFCBANK.NS</td>
+                    <td>1,675</td>
+                    <td>-4.65</td>
+                    <td>-4.65</td>
+                    <td>-4.65</td>
+                    <td>24.41</td>
+                    <td>33.29</td>
+                    <td>133.11</td>
+                </tr>
+                
+                <tr>
+                    <td>HDFCLIFE.NS</td>
+                    <td>647</td>
+                    <td>-6.30</td>
+                    <td>-16.04</td>
+                    <td>-16.04</td>
+                    <td>41.86</td>
+                    <td>41.86</td>
+                    <td>92.11</td>
+                </tr>
+                
+                <tr>
+                    <td>HEROMOTOCO.NS</td>
+                    <td>3,102</td>
+                    <td>-3.27</td>
+                    <td>-3.27</td>
+                    <td>-7.74</td>
+                    <td>38.11</td>
+                    <td>52.05</td>
+                    <td>129.39</td>
+                </tr>
+                
+                <tr>
+                    <td>HINDALCO.NS</td>
+                    <td>434</td>
+                    <td>-13.79</td>
+                    <td>-31.06</td>
+                    <td>-31.06</td>
+                    <td>21.10</td>
+                    <td>41.93</td>
+                    <td>422.71</td>
+                </tr>
+                
+                <tr>
+                    <td>HINDUNILVR.NS</td>
+                    <td>2,604</td>
+                    <td>-5.98</td>
+                    <td>-5.98</td>
+                    <td>-5.98</td>
+                    <td>9.71</td>
+                    <td>41.46</td>
+                    <td>91.24</td>
+                </tr>
+                
+                <tr>
+                    <td>ICICIBANK.NS</td>
+                    <td>997</td>
+                    <td>-0.44</td>
+                    <td>-0.44</td>
+                    <td>-0.44</td>
+                    <td>27.10</td>
+                    <td>56.19</td>
+                    <td>284.74</td>
+                </tr>
+                
+                <tr>
+                    <td>INDUSINDBK.NS</td>
+                    <td>1,407</td>
+                    <td>-2.50</td>
+                    <td>-2.50</td>
+                    <td>-28.90</td>
+                    <td>52.80</td>
+                    <td>87.93</td>
+                    <td>511.90</td>
+                </tr>
+                
+                <tr>
+                    <td>INFY.NS</td>
+                    <td>1,331</td>
+                    <td>-18.23</td>
+                    <td>-28.49</td>
+                    <td>-28.49</td>
+                    <td>15.38</td>
+                    <td>15.38</td>
+                    <td>186.65</td>
+                </tr>
+                
+                <tr>
+                    <td>ITC.NS</td>
+                    <td>490</td>
+                    <td>-1.46</td>
+                    <td>-1.46</td>
+                    <td>-1.46</td>
+                    <td>68.15</td>
+                    <td>156.85</td>
+                    <td>331.39</td>
+                </tr>
+                
+                <tr>
+                    <td>JSWSTEEL.NS</td>
+                    <td>786</td>
+                    <td>-4.48</td>
+                    <td>-4.48</td>
+                    <td>-4.48</td>
+                    <td>37.71</td>
+                    <td>61.64</td>
+                    <td>560.54</td>
+                </tr>
+                
+                <tr>
+                    <td>KOTAKBANK.NS</td>
+                    <td>1,970</td>
+                    <td>-4.56</td>
+                    <td>-12.50</td>
+                    <td>-12.50</td>
+                    <td>19.88</td>
+                    <td>21.30</td>
+                    <td>97.04</td>
+                </tr>
+                
+                <tr>
+                    <td>LT.NS</td>
+                    <td>2,586</td>
+                    <td>-0.34</td>
+                    <td>-0.34</td>
+                    <td>-0.34</td>
+                    <td>48.47</td>
+                    <td>79.86</td>
+                    <td>312.08</td>
+                </tr>
+                
+                <tr>
+                    <td>LT.NS</td>
+                    <td>2,586</td>
+                    <td>-0.34</td>
+                    <td>-0.34</td>
+                    <td>-0.34</td>
+                    <td>48.47</td>
+                    <td>79.86</td>
+                    <td>312.08</td>
+                </tr>
+                
+                <tr>
+                    <td>M&amp;M.NS</td>
+                    <td>1,523</td>
+                    <td>-3.47</td>
+                    <td>-3.47</td>
+                    <td>-3.47</td>
+                    <td>38.47</td>
+                    <td>134.15</td>
+                    <td>550.36</td>
+                </tr>
+                
+                <tr>
+                    <td>MARUTI.NS</td>
+                    <td>9,770</td>
+                    <td>-2.66</td>
+                    <td>-2.66</td>
+                    <td>-2.66</td>
+                    <td>20.98</td>
+                    <td>50.45</td>
+                    <td>149.58</td>
+                </tr>
+                
+                <tr>
+                    <td>NESTLEIND.NS</td>
+                    <td>22,982</td>
+                    <td>-1.76</td>
+                    <td>-1.76</td>
+                    <td>-1.76</td>
+                    <td>29.18</td>
+                    <td>45.22</td>
+                    <td>175.33</td>
+                </tr>
+                
+                <tr>
+                    <td>NTPC.NS</td>
+                    <td>195</td>
+                    <td>-1.34</td>
+                    <td>-1.34</td>
+                    <td>-1.34</td>
+                    <td>38.47</td>
+                    <td>97.85</td>
+                    <td>233.30</td>
+                </tr>
+                
+                <tr>
+                    <td>ONGC.NS</td>
+                    <td>170</td>
+                    <td>-0.26</td>
+                    <td>-3.46</td>
+                    <td>-3.46</td>
+                    <td>51.30</td>
+                    <td>84.62</td>
+                    <td>337.75</td>
+                </tr>
+                
+                <tr>
+                    <td>POWERGRID.NS</td>
+                    <td>244</td>
+                    <td>-7.40</td>
+                    <td>-7.40</td>
+                    <td>-7.40</td>
+                    <td>37.29</td>
+                    <td>64.04</td>
+                    <td>219.97</td>
+                </tr>
+                
+                <tr>
+                    <td>RELIANCE.NS</td>
+                    <td>2,538</td>
+                    <td>-11.11</td>
+                    <td>-11.11</td>
+                    <td>-11.11</td>
+                    <td>16.46</td>
+                    <td>26.29</td>
+                    <td>195.61</td>
+                </tr>
+                
+                <tr>
+                    <td>SBILIFE.NS</td>
+                    <td>1,290</td>
+                    <td>-3.48</td>
+                    <td>-3.48</td>
+                    <td>-3.48</td>
+                    <td>22.46</td>
+                    <td>29.16</td>
+                    <td>168.90</td>
+                </tr>
+                
+                <tr>
+                    <td>SBIN.NS</td>
+                    <td>615</td>
+                    <td>-0.71</td>
+                    <td>-0.71</td>
+                    <td>-0.71</td>
+                    <td>25.57</td>
+                    <td>58.71</td>
+                    <td>330.06</td>
+                </tr>
+                
+                <tr>
+                    <td>SUNPHARMA.NS</td>
+                    <td>1,097</td>
+                    <td>-0.67</td>
+                    <td>-0.67</td>
+                    <td>-0.67</td>
+                    <td>29.50</td>
+                    <td>66.64</td>
+                    <td>263.03</td>
+                </tr>
+                
+                <tr>
+                    <td>TATACONSUM.NS</td>
+                    <td>852</td>
+                    <td>-2.83</td>
+                    <td>-2.83</td>
+                    <td>-2.83</td>
+                    <td>25.51</td>
+                    <td>33.60</td>
+                    <td>402.57</td>
+                </tr>
+                
+                <tr>
+                    <td>TATAMOTORS.NS</td>
+                    <td>625</td>
+                    <td>-1.43</td>
+                    <td>-1.43</td>
+                    <td>-1.43</td>
+                    <td>66.78</td>
+                    <td>133.10</td>
+                    <td>885.43</td>
+                </tr>
+                
+                <tr>
+                    <td>TATASTEEL.NS</td>
+                    <td>116</td>
+                    <td>-3.13</td>
+                    <td>-3.13</td>
+                    <td>-3.13</td>
+                    <td>29.19</td>
+                    <td>174.84</td>
+                    <td>1032.59</td>
+                </tr>
+                
+                <tr>
+                    <td>TCS.NS</td>
+                    <td>3,368</td>
+                    <td>-4.87</td>
+                    <td>-12.96</td>
+                    <td>-12.96</td>
+                    <td>18.93</td>
+                    <td>18.93</td>
+                    <td>140.19</td>
+                </tr>
+                
+                <tr>
+                    <td>TECHM.NS</td>
+                    <td>1,195</td>
+                    <td>-2.32</td>
+                    <td>-29.31</td>
+                    <td>-29.31</td>
+                    <td>30.08</td>
+                    <td>37.68</td>
+                    <td>193.65</td>
+                </tr>
+                
+                <tr>
+                    <td>TITAN.NS</td>
+                    <td>2,976</td>
+                    <td>-6.98</td>
+                    <td>-6.98</td>
+                    <td>-6.98</td>
+                    <td>32.19</td>
+                    <td>78.74</td>
+                    <td>321.25</td>
+                </tr>
+                
+                <tr>
+                    <td>ULTRACEMCO.NS</td>
+                    <td>8,119</td>
+                    <td>-4.47</td>
+                    <td>-4.47</td>
+                    <td>-4.47</td>
+                    <td>35.21</td>
+                    <td>58.34</td>
+                    <td>182.87</td>
+                </tr>
+                
+                <tr>
+                    <td>UPL.NS</td>
+                    <td>634</td>
+                    <td>-21.36</td>
+                    <td>-24.12</td>
+                    <td>-24.68</td>
+                    <td>0.73</td>
+                    <td>5.92</td>
+                    <td>174.49</td>
+                </tr>
+                
+                <tr>
+                    <td>WIPRO.NS</td>
+                    <td>404</td>
+                    <td>-8.81</td>
+                    <td>-44.62</td>
+                    <td>-44.62</td>
+                    <td>14.97</td>
+                    <td>14.97</td>
+                    <td>157.63</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add DataTables JavaScript -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTables with pagination disabled
+            $('#stock-table').DataTable({
+                "paging": false
+            });
+        });
+    </script>
+</body>
+</html>
