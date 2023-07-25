@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NSE Market Insights</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y42F6Q2CDF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y42F6Q2CDF');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            /* Set the background image */
+            background-image: url('paper.jpeg');
+            /* Set background size to cover */
+            background-size: cover;
+            /* Set background repeat to no-repeat */
+            background-repeat: no-repeat;
+            /* Set background attachment to fixed */
+            background-attachment: fixed;
+            /* Set body height to 100vh for full screen image */
+            height: 100vh;
+            /* Set margin and padding to 0 to remove any gaps */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light justify-content-between flex-nowrap flex-row">
+        <div class="container">
+            <a href="#" class="navbar-brand float-left">Market Insights </a>
+            <ul class="nav navbar-nav flex-row float-right">
+                <li class="nav-item"><a class="nav-link pr-3" href="index.html">Nifty 50</a></li>
+                <li class="nav-item"><a class="nav-link pr-3" href="niftynext50.html">Nifty Next 50</a></li>
+                <li class="nav-item"><a class="nav-link pr-3" href="midcap100.html">Midcap 100</a></li>
+                <li class="nav-item"><a class="nav-link" href="chart.html">Chart</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        // Get the "Chart" nav-link element
+        const chartLink = document.getElementById('chartLink');
+
+        // Add click event listener to the "Chart" nav-link
+        chartLink.addEventListener('click', function (event) {
+            // Prevent the default behavior of the link
+            event.preventDefault();
+
+            // Use window.location to navigate to chart.html
+            window.location.href = 'chart.html';
+        });
+    </script>
+
+    <div class="container mt-4 text-monospace">
+        <h2>
+            Explore Midcap 100 Stocks:
+            <small class="text-muted">Click on any column to sort the table</small>
+        </h2>
+        <br><br>
+
+        <table class="table table-striped" id="stock-table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Company Name</th>
+                    <th>Industry</th>
+                    <th>Symbol</th>
+                    <th>Current Price</th>
+                    <th>1Y High % Diff</th>
+                    <th>2Y High % Diff</th>
+                    <th>5Y High % Diff</th>
+                    <th>1Y Low % Diff</th>
+                    <th>2Y Low % Diff</th>
+                    <th>5Y Low % Diff</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>AU Small Finance Bank Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>AUBANK.NS</td>
+                    <td>731</td>
+                    <td>-7.89</td>
+                    <td>-7.89</td>
+                    <td>-7.89</td>
+                    <td>33.62</td>
+                    <td>58.46</td> <!-- Add 1Y High % Diff here -->
+                    <td>300.49</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Abbott India Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>ABBOTINDIA.NS</td>
+                    <td>22,986</td>
+                    <td>-2.52</td>
+                    <td>-2.52</td>
+                    <td>-2.52</td>
+                    <td>34.33</td>
+                    <td>51.92</td> <!-- Add 1Y High % Diff here -->
+                    <td>251.70</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Adani Power Ltd.</td>
+                    <td>Power</td>
+                    <td>ADANIPOWER.NS</td>
+                    <td>260</td>
+                    <td>-39.85</td>
+                    <td>-39.85</td>
+                    <td>-39.85</td>
+                    <td>96.49</td>
+                    <td>269.79</td> <!-- Add 1Y High % Diff here -->
+                    <td>1138.81</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Aditya Birla Capital Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>ABCAPITAL.NS</td>
+                    <td>188</td>
+                    <td>-5.32</td>
+                    <td>-5.32</td>
+                    <td>-5.32</td>
+                    <td>85.64</td>
+                    <td>120.44</td> <!-- Add 1Y High % Diff here -->
+                    <td>405.22</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Aditya Birla Fashion and Retail Ltd.</td>
+                    <td>Consumer Services</td>
+                    <td>ABFRL.NS</td>
+                    <td>217</td>
+                    <td>-39.42</td>
+                    <td>-39.42</td>
+                    <td>-39.42</td>
+                    <td>18.11</td>
+                    <td>18.11</td> <!-- Add 1Y High % Diff here -->
+                    <td>127.79</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Alkem Laboratories Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>ALKEM.NS</td>
+                    <td>3,950</td>
+                    <td>-0.92</td>
+                    <td>-1.23</td>
+                    <td>-1.23</td>
+                    <td>39.43</td>
+                    <td>40.94</td> <!-- Add 1Y High % Diff here -->
+                    <td>148.07</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Apollo Tyres Ltd.</td>
+                    <td>Automobile and Auto Components</td>
+                    <td>APOLLOTYRE.NS</td>
+                    <td>420</td>
+                    <td>-3.64</td>
+                    <td>-3.64</td>
+                    <td>-3.64</td>
+                    <td>103.93</td>
+                    <td>159.04</td> <!-- Add 1Y High % Diff here -->
+                    <td>491.82</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Ashok Leyland Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>ASHOKLEY.NS</td>
+                    <td>182</td>
+                    <td>-1.98</td>
+                    <td>-1.98</td>
+                    <td>-1.98</td>
+                    <td>41.77</td>
+                    <td>103.88</td> <!-- Add 1Y High % Diff here -->
+                    <td>469.44</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Astral Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>ASTRAL.NS</td>
+                    <td>1,887</td>
+                    <td>-6.77</td>
+                    <td>-6.77</td>
+                    <td>-6.77</td>
+                    <td>45.82</td>
+                    <td>59.33</td> <!-- Add 1Y High % Diff here -->
+                    <td>416.39</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Aurobindo Pharma Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>AUROPHARMA.NS</td>
+                    <td>787</td>
+                    <td>-0.54</td>
+                    <td>-16.90</td>
+                    <td>-24.36</td>
+                    <td>99.57</td>
+                    <td>99.57</td> <!-- Add 1Y High % Diff here -->
+                    <td>179.91</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Balkrishna Industries Ltd.</td>
+                    <td>Automobile and Auto Components</td>
+                    <td>BALKRISIND.NS</td>
+                    <td>2,385</td>
+                    <td>-5.37</td>
+                    <td>-10.90</td>
+                    <td>-10.90</td>
+                    <td>33.56</td>
+                    <td>42.44</td> <!-- Add 1Y High % Diff here -->
+                    <td>265.55</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Bandhan Bank Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>BANDHANBNK.NS</td>
+                    <td>218</td>
+                    <td>-30.69</td>
+                    <td>-37.58</td>
+                    <td>-70.32</td>
+                    <td>19.79</td>
+                    <td>19.79</td> <!-- Add 1Y High % Diff here -->
+                    <td>43.85</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Bank of India</td>
+                    <td>Financial Services</td>
+                    <td>BANKINDIA.NS</td>
+                    <td>83</td>
+                    <td>-17.56</td>
+                    <td>-17.56</td>
+                    <td>-19.07</td>
+                    <td>86.09</td>
+                    <td>120.65</td> <!-- Add 1Y High % Diff here -->
+                    <td>193.23</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Bata India Ltd.</td>
+                    <td>Consumer Durables</td>
+                    <td>BATAINDIA.NS</td>
+                    <td>1,701</td>
+                    <td>-14.48</td>
+                    <td>-22.83</td>
+                    <td>-22.83</td>
+                    <td>23.17</td>
+                    <td>23.17</td> <!-- Add 1Y High % Diff here -->
+                    <td>114.61</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Bharat Forge Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>BHARATFORG.NS</td>
+                    <td>867</td>
+                    <td>-5.03</td>
+                    <td>-5.03</td>
+                    <td>-5.03</td>
+                    <td>29.14</td>
+                    <td>48.29</td> <!-- Add 1Y High % Diff here -->
+                    <td>327.13</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Bharat Heavy Electricals Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>BHEL.NS</td>
+                    <td>97</td>
+                    <td>-1.86</td>
+                    <td>-1.86</td>
+                    <td>-1.86</td>
+                    <td>91.57</td>
+                    <td>137.62</td> <!-- Add 1Y High % Diff here -->
+                    <td>434.64</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Biocon Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>BIOCON.NS</td>
+                    <td>245</td>
+                    <td>-23.39</td>
+                    <td>-39.38</td>
+                    <td>-48.95</td>
+                    <td>29.77</td>
+                    <td>29.77</td> <!-- Add 1Y High % Diff here -->
+                    <td>29.77</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>CG Power and Industrial Solutions Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>CGPOWER.NS</td>
+                    <td>399</td>
+                    <td>-5.92</td>
+                    <td>-5.92</td>
+                    <td>-5.92</td>
+                    <td>89.32</td>
+                    <td>442.28</td> <!-- Add 1Y High % Diff here -->
+                    <td>8353.81</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Coforge Ltd.</td>
+                    <td>Information Technology</td>
+                    <td>COFORGE.NS</td>
+                    <td>4,687</td>
+                    <td>-7.26</td>
+                    <td>-21.55</td>
+                    <td>-21.55</td>
+                    <td>48.49</td>
+                    <td>48.62</td> <!-- Add 1Y High % Diff here -->
+                    <td>565.66</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Container Corporation of India Ltd.</td>
+                    <td>Services</td>
+                    <td>CONCOR.NS</td>
+                    <td>679</td>
+                    <td>-16.58</td>
+                    <td>-16.58</td>
+                    <td>-16.58</td>
+                    <td>22.44</td>
+                    <td>25.65</td> <!-- Add 1Y High % Diff here -->
+                    <td>171.40</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Coromandel International Ltd.</td>
+                    <td>Chemicals</td>
+                    <td>COROMANDEL.NS</td>
+                    <td>967</td>
+                    <td>-9.86</td>
+                    <td>-9.86</td>
+                    <td>-9.86</td>
+                    <td>17.68</td>
+                    <td>40.95</td> <!-- Add 1Y High % Diff here -->
+                    <td>208.73</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Crompton Greaves Consumer Electricals Ltd.</td>
+                    <td>Consumer Durables</td>
+                    <td>CROMPTON.NS</td>
+                    <td>287</td>
+                    <td>-31.62</td>
+                    <td>-42.40</td>
+                    <td>-42.40</td>
+                    <td>16.87</td>
+                    <td>16.87</td> <!-- Add 1Y High % Diff here -->
+                    <td>70.23</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Cummins India Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>CUMMINSIND.NS</td>
+                    <td>1,922</td>
+                    <td>-0.89</td>
+                    <td>-0.89</td>
+                    <td>-0.89</td>
+                    <td>76.72</td>
+                    <td>143.59</td> <!-- Add 1Y High % Diff here -->
+                    <td>632.57</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Dalmia Bharat Ltd.</td>
+                    <td>Construction Materials</td>
+                    <td>DALBHARAT.NS</td>
+                    <td>1,908</td>
+                    <td>-16.43</td>
+                    <td>-24.13</td>
+                    <td>-24.13</td>
+                    <td>29.89</td>
+                    <td>58.76</td> <!-- Add 1Y High % Diff here -->
+                    <td>380.15</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Deepak Nitrite Ltd.</td>
+                    <td>Chemicals</td>
+                    <td>DEEPAKNTR.NS</td>
+                    <td>2,007</td>
+                    <td>-14.80</td>
+                    <td>-33.26</td>
+                    <td>-33.26</td>
+                    <td>16.06</td>
+                    <td>19.90</td> <!-- Add 1Y High % Diff here -->
+                    <td>900.25</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Delhivery Ltd.</td>
+                    <td>Services</td>
+                    <td>DELHIVERY.NS</td>
+                    <td>412</td>
+                    <td>-37.56</td>
+                    <td>-41.67</td>
+                    <td>-41.67</td>
+                    <td>41.91</td>
+                    <td>41.91</td> <!-- Add 1Y High % Diff here -->
+                    <td>41.91</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Devyani International Ltd.</td>
+                    <td>Consumer Services</td>
+                    <td>DEVYANI.NS</td>
+                    <td>198</td>
+                    <td>-7.56</td>
+                    <td>-7.56</td>
+                    <td>-7.56</td>
+                    <td>48.38</td>
+                    <td>84.80</td> <!-- Add 1Y High % Diff here -->
+                    <td>84.80</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Dixon Technologies (India) Ltd.</td>
+                    <td>Consumer Durables</td>
+                    <td>DIXON.NS</td>
+                    <td>4,112</td>
+                    <td>-13.05</td>
+                    <td>-34.09</td>
+                    <td>-34.09</td>
+                    <td>61.10</td>
+                    <td>61.10</td> <!-- Add 1Y High % Diff here -->
+                    <td>1220.88</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Dr. Lal Path Labs Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>LALPATHLAB.NS</td>
+                    <td>2,383</td>
+                    <td>-13.34</td>
+                    <td>-43.56</td>
+                    <td>-43.56</td>
+                    <td>35.24</td>
+                    <td>35.24</td> <!-- Add 1Y High % Diff here -->
+                    <td>201.38</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Escorts Kubota Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>ESCORTS.NS</td>
+                    <td>2,366</td>
+                    <td>-1.21</td>
+                    <td>-1.21</td>
+                    <td>-1.21</td>
+                    <td>47.92</td>
+                    <td>111.44</td> <!-- Add 1Y High % Diff here -->
+                    <td>465.54</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Federal Bank Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>FEDERALBNK.NS</td>
+                    <td>132</td>
+                    <td>-7.53</td>
+                    <td>-7.53</td>
+                    <td>-7.53</td>
+                    <td>26.23</td>
+                    <td>74.14</td> <!-- Add 1Y High % Diff here -->
+                    <td>281.10</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Fortis Healthcare Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>FORTIS.NS</td>
+                    <td>340</td>
+                    <td>-0.45</td>
+                    <td>-0.45</td>
+                    <td>-0.45</td>
+                    <td>38.96</td>
+                    <td>55.24</td> <!-- Add 1Y High % Diff here -->
+                    <td>206.50</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Gland Pharma Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>GLAND.NS</td>
+                    <td>1,227</td>
+                    <td>-52.93</td>
+                    <td>-71.79</td>
+                    <td>-71.79</td>
+                    <td>42.53</td>
+                    <td>42.53</td> <!-- Add 1Y High % Diff here -->
+                    <td>42.53</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Godrej Properties Ltd.</td>
+                    <td>Realty</td>
+                    <td>GODREJPROP.NS</td>
+                    <td>1,651</td>
+                    <td>-1.55</td>
+                    <td>-36.41</td>
+                    <td>-36.41</td>
+                    <td>64.37</td>
+                    <td>64.37</td> <!-- Add 1Y High % Diff here -->
+                    <td>258.81</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Gujarat Fluorochemicals Ltd.</td>
+                    <td>Chemicals</td>
+                    <td>FLUOROCHEM.NS</td>
+                    <td>2,740</td>
+                    <td>-34.32</td>
+                    <td>-34.32</td>
+                    <td>-34.32</td>
+                    <td>8.13</td>
+                    <td>84.88</td> <!-- Add 1Y High % Diff here -->
+                    <td>1162.92</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Gujarat Gas Ltd.</td>
+                    <td>Oil Gas &amp; Consumable Fuels</td>
+                    <td>GUJGASLTD.NS</td>
+                    <td>469</td>
+                    <td>-12.99</td>
+                    <td>-39.91</td>
+                    <td>-39.91</td>
+                    <td>9.60</td>
+                    <td>16.71</td> <!-- Add 1Y High % Diff here -->
+                    <td>314.84</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Hindustan Petroleum Corporation Ltd.</td>
+                    <td>Oil Gas &amp; Consumable Fuels</td>
+                    <td>HINDPETRO.NS</td>
+                    <td>300</td>
+                    <td>-2.50</td>
+                    <td>-10.62</td>
+                    <td>-10.62</td>
+                    <td>50.11</td>
+                    <td>53.58</td> <!-- Add 1Y High % Diff here -->
+                    <td>159.67</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Hindustan Zinc Ltd.</td>
+                    <td>Metals &amp; Mining</td>
+                    <td>HINDZINC.NS</td>
+                    <td>318</td>
+                    <td>-5.54</td>
+                    <td>-5.54</td>
+                    <td>-5.54</td>
+                    <td>53.59</td>
+                    <td>77.66</td> <!-- Add 1Y High % Diff here -->
+                    <td>369.30</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Honeywell Automation India Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>HONAUT.NS</td>
+                    <td>42,598</td>
+                    <td>-3.94</td>
+                    <td>-9.69</td>
+                    <td>-14.42</td>
+                    <td>24.04</td>
+                    <td>41.44</td> <!-- Add 1Y High % Diff here -->
+                    <td>138.72</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>IDFC First Bank Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>IDFCFIRSTB.NS</td>
+                    <td>83</td>
+                    <td>-2.87</td>
+                    <td>-2.87</td>
+                    <td>-2.87</td>
+                    <td>134.94</td>
+                    <td>186.87</td> <!-- Add 1Y High % Diff here -->
+                    <td>370.54</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Indian Bank</td>
+                    <td>Financial Services</td>
+                    <td>INDIANB.NS</td>
+                    <td>329</td>
+                    <td>-2.60</td>
+                    <td>-2.60</td>
+                    <td>-5.47</td>
+                    <td>104.45</td>
+                    <td>207.35</td> <!-- Add 1Y High % Diff here -->
+                    <td>763.83</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Indian Hotels Co. Ltd.</td>
+                    <td>Consumer Services</td>
+                    <td>INDHOTEL.NS</td>
+                    <td>392</td>
+                    <td>-3.41</td>
+                    <td>-3.41</td>
+                    <td>-3.41</td>
+                    <td>54.58</td>
+                    <td>196.05</td> <!-- Add 1Y High % Diff here -->
+                    <td>540.05</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Indian Railway Finance Corporation Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>IRFC.NS</td>
+                    <td>34</td>
+                    <td>-7.89</td>
+                    <td>-7.89</td>
+                    <td>-7.89</td>
+                    <td>80.30</td>
+                    <td>89.17</td> <!-- Add 1Y High % Diff here -->
+                    <td>89.17</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Indraprastha Gas Ltd.</td>
+                    <td>Oil Gas &amp; Consumable Fuels</td>
+                    <td>IGL.NS</td>
+                    <td>473</td>
+                    <td>-8.15</td>
+                    <td>-17.35</td>
+                    <td>-17.35</td>
+                    <td>43.86</td>
+                    <td>54.05</td> <!-- Add 1Y High % Diff here -->
+                    <td>134.46</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Ipca Laboratories Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>IPCALAB.NS</td>
+                    <td>798</td>
+                    <td>-22.40</td>
+                    <td>-41.75</td>
+                    <td>-41.75</td>
+                    <td>19.27</td>
+                    <td>19.27</td> <!-- Add 1Y High % Diff here -->
+                    <td>171.47</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>JSW Energy Ltd.</td>
+                    <td>Power</td>
+                    <td>JSWENERGY.NS</td>
+                    <td>294</td>
+                    <td>-19.68</td>
+                    <td>-26.84</td>
+                    <td>-26.84</td>
+                    <td>44.83</td>
+                    <td>62.81</td> <!-- Add 1Y High % Diff here -->
+                    <td>805.24</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Jubilant Foodworks Ltd.</td>
+                    <td>Consumer Services</td>
+                    <td>JUBLFOOD.NS</td>
+                    <td>476</td>
+                    <td>-26.75</td>
+                    <td>-47.84</td>
+                    <td>-47.84</td>
+                    <td>15.95</td>
+                    <td>15.95</td> <!-- Add 1Y High % Diff here -->
+                    <td>147.32</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>L&amp;T Finance Holdings Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>L&amp;TFH.NS</td>
+                    <td>127</td>
+                    <td>-8.01</td>
+                    <td>-8.01</td>
+                    <td>-29.74</td>
+                    <td>79.12</td>
+                    <td>122.10</td> <!-- Add 1Y High % Diff here -->
+                    <td>209.38</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>L&amp;T Technology Services Ltd.</td>
+                    <td>Information Technology</td>
+                    <td>LTTS.NS</td>
+                    <td>3,974</td>
+                    <td>-7.28</td>
+                    <td>-32.00</td>
+                    <td>-32.00</td>
+                    <td>25.62</td>
+                    <td>38.19</td> <!-- Add 1Y High % Diff here -->
+                    <td>315.91</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>LIC Housing Finance Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>LICHSGFIN.NS</td>
+                    <td>392</td>
+                    <td>-8.93</td>
+                    <td>-11.61</td>
+                    <td>-24.69</td>
+                    <td>24.56</td>
+                    <td>40.12</td> <!-- Add 1Y High % Diff here -->
+                    <td>131.21</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Laurus Labs Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>LAURUSLABS.NS</td>
+                    <td>346</td>
+                    <td>-42.41</td>
+                    <td>-51.63</td>
+                    <td>-51.63</td>
+                    <td>24.85</td>
+                    <td>24.85</td> <!-- Add 1Y High % Diff here -->
+                    <td>506.21</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Lupin Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>LUPIN.NS</td>
+                    <td>937</td>
+                    <td>-1.04</td>
+                    <td>-20.03</td>
+                    <td>-24.84</td>
+                    <td>56.16</td>
+                    <td>62.52</td> <!-- Add 1Y High % Diff here -->
+                    <td>90.00</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>MRF Ltd.</td>
+                    <td>Automobile and Auto Components</td>
+                    <td>MRF.NS</td>
+                    <td>102,525</td>
+                    <td>-0.64</td>
+                    <td>-0.64</td>
+                    <td>-0.64</td>
+                    <td>30.51</td>
+                    <td>63.31</td> <!-- Add 1Y High % Diff here -->
+                    <td>106.61</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Mahindra &amp; Mahindra Financial Services Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>M&amp;MFIN.NS</td>
+                    <td>315</td>
+                    <td>-5.38</td>
+                    <td>-5.38</td>
+                    <td>-34.19</td>
+                    <td>86.21</td>
+                    <td>165.38</td> <!-- Add 1Y High % Diff here -->
+                    <td>348.72</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Mankind Pharma Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>MANKIND.NS</td>
+                    <td>1,918</td>
+                    <td>-1.56</td>
+                    <td>-1.56</td>
+                    <td>-1.56</td>
+                    <td>54.47</td>
+                    <td>54.47</td> <!-- Add 1Y High % Diff here -->
+                    <td>54.47</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Max Financial Services Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>MFSL.NS</td>
+                    <td>811</td>
+                    <td>-8.27</td>
+                    <td>-29.29</td>
+                    <td>-29.29</td>
+                    <td>35.50</td>
+                    <td>35.50</td> <!-- Add 1Y High % Diff here -->
+                    <td>193.76</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Max Healthcare Institute Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>MAXHEALTH.NS</td>
+                    <td>610</td>
+                    <td>-3.03</td>
+                    <td>-3.03</td>
+                    <td>-3.03</td>
+                    <td>72.52</td>
+                    <td>123.94</td> <!-- Add 1Y High % Diff here -->
+                    <td>528.82</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Motherson Sumi Wiring India Ltd.</td>
+                    <td>Automobile and Auto Components</td>
+                    <td>MSUMI.NS</td>
+                    <td>61</td>
+                    <td>-13.00</td>
+                    <td>-13.00</td>
+                    <td>-13.00</td>
+                    <td>37.10</td>
+                    <td>56.44</td> <!-- Add 1Y High % Diff here -->
+                    <td>56.44</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>MphasiS Ltd.</td>
+                    <td>Information Technology</td>
+                    <td>MPHASIS.NS</td>
+                    <td>2,268</td>
+                    <td>-4.75</td>
+                    <td>-33.62</td>
+                    <td>-33.62</td>
+                    <td>40.29</td>
+                    <td>40.29</td> <!-- Add 1Y High % Diff here -->
+                    <td>305.22</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>NHPC Ltd.</td>
+                    <td>Power</td>
+                    <td>NHPC.NS</td>
+                    <td>50</td>
+                    <td>-3.47</td>
+                    <td>-3.47</td>
+                    <td>-3.47</td>
+                    <td>60.12</td>
+                    <td>119.80</td> <!-- Add 1Y High % Diff here -->
+                    <td>293.00</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>NMDC Ltd.</td>
+                    <td>Metals &amp; Mining</td>
+                    <td>NMDC.NS</td>
+                    <td>112</td>
+                    <td>-15.67</td>
+                    <td>-33.90</td>
+                    <td>-39.84</td>
+                    <td>25.65</td>
+                    <td>25.65</td> <!-- Add 1Y High % Diff here -->
+                    <td>121.27</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Navin Fluorine International Ltd.</td>
+                    <td>Chemicals</td>
+                    <td>NAVINFLUOR.NS</td>
+                    <td>4,308</td>
+                    <td>-12.70</td>
+                    <td>-12.70</td>
+                    <td>-12.70</td>
+                    <td>14.79</td>
+                    <td>35.51</td> <!-- Add 1Y High % Diff here -->
+                    <td>673.41</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Oberoi Realty Ltd.</td>
+                    <td>Realty</td>
+                    <td>OBEROIRLTY.NS</td>
+                    <td>1,064</td>
+                    <td>-3.13</td>
+                    <td>-3.13</td>
+                    <td>-3.13</td>
+                    <td>35.27</td>
+                    <td>66.74</td> <!-- Add 1Y High % Diff here -->
+                    <td>269.96</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Oil India Ltd.</td>
+                    <td>Oil Gas &amp; Consumable Fuels</td>
+                    <td>OIL.NS</td>
+                    <td>262</td>
+                    <td>-4.23</td>
+                    <td>-6.29</td>
+                    <td>-6.29</td>
+                    <td>66.41</td>
+                    <td>91.88</td> <!-- Add 1Y High % Diff here -->
+                    <td>397.33</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>One 97 Communications Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>PAYTM.NS</td>
+                    <td>789</td>
+                    <td>-13.70</td>
+                    <td>-59.61</td>
+                    <td>-59.61</td>
+                    <td>80.13</td>
+                    <td>80.13</td> <!-- Add 1Y High % Diff here -->
+                    <td>80.13</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Oracle Financial Services Software Ltd.</td>
+                    <td>Information Technology</td>
+                    <td>OFSS.NS</td>
+                    <td>3,844</td>
+                    <td>-5.04</td>
+                    <td>-15.89</td>
+                    <td>-15.89</td>
+                    <td>41.94</td>
+                    <td>41.94</td> <!-- Add 1Y High % Diff here -->
+                    <td>226.53</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>PB Fintech Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>POLICYBZR.NS</td>
+                    <td>718</td>
+                    <td>-8.12</td>
+                    <td>-51.12</td>
+                    <td>-51.12</td>
+                    <td>101.71</td>
+                    <td>101.71</td> <!-- Add 1Y High % Diff here -->
+                    <td>101.71</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Patanjali Foods Ltd.</td>
+                    <td>Fast Moving Consumer Goods</td>
+                    <td>PATANJALI.NS</td>
+                    <td>1,305</td>
+                    <td>-12.59</td>
+                    <td>-12.59</td>
+                    <td>-13.83</td>
+                    <td>52.91</td>
+                    <td>87.05</td> <!-- Add 1Y High % Diff here -->
+                    <td>7983.20</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Persistent Systems Ltd.</td>
+                    <td>Information Technology</td>
+                    <td>PERSISTENT.NS</td>
+                    <td>4,682</td>
+                    <td>-11.10</td>
+                    <td>-11.10</td>
+                    <td>-11.10</td>
+                    <td>52.70</td>
+                    <td>60.07</td> <!-- Add 1Y High % Diff here -->
+                    <td>1044.67</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Petronet LNG Ltd.</td>
+                    <td>Oil Gas &amp; Consumable Fuels</td>
+                    <td>PETRONET.NS</td>
+                    <td>225</td>
+                    <td>-6.89</td>
+                    <td>-6.89</td>
+                    <td>-9.90</td>
+                    <td>19.26</td>
+                    <td>25.22</td> <!-- Add 1Y High % Diff here -->
+                    <td>55.08</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Piramal Enterprises Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>PEL.NS</td>
+                    <td>1,004</td>
+                    <td>-49.89</td>
+                    <td>-64.67</td>
+                    <td>-65.75</td>
+                    <td>65.66</td>
+                    <td>65.66</td> <!-- Add 1Y High % Diff here -->
+                    <td>79.77</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Polycab India Ltd.</td>
+                    <td>Capital Goods</td>
+                    <td>POLYCAB.NS</td>
+                    <td>4,693</td>
+                    <td>-4.68</td>
+                    <td>-4.68</td>
+                    <td>-4.68</td>
+                    <td>114.44</td>
+                    <td>169.70</td> <!-- Add 1Y High % Diff here -->
+                    <td>815.94</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Poonawalla Fincorp Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>POONAWALLA.NS</td>
+                    <td>379</td>
+                    <td>-1.38</td>
+                    <td>-1.38</td>
+                    <td>-1.38</td>
+                    <td>57.11</td>
+                    <td>171.65</td> <!-- Add 1Y High % Diff here -->
+                    <td>2863.99</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Power Finance Corporation Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>PFC.NS</td>
+                    <td>238</td>
+                    <td>-2.36</td>
+                    <td>-2.36</td>
+                    <td>-2.36</td>
+                    <td>153.61</td>
+                    <td>168.46</td> <!-- Add 1Y High % Diff here -->
+                    <td>368.50</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Prestige Estates Projects Ltd.</td>
+                    <td>Realty</td>
+                    <td>PRESTIGE.NS</td>
+                    <td>555</td>
+                    <td>-9.88</td>
+                    <td>-9.88</td>
+                    <td>-9.88</td>
+                    <td>42.03</td>
+                    <td>77.23</td> <!-- Add 1Y High % Diff here -->
+                    <td>318.37</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Punjab National Bank</td>
+                    <td>Financial Services</td>
+                    <td>PNB.NS</td>
+                    <td>60</td>
+                    <td>-6.83</td>
+                    <td>-6.83</td>
+                    <td>-37.10</td>
+                    <td>96.43</td>
+                    <td>124.01</td> <!-- Add 1Y High % Diff here -->
+                    <td>138.92</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>REC Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>RECLTD.NS</td>
+                    <td>172</td>
+                    <td>-1.99</td>
+                    <td>-1.99</td>
+                    <td>-1.99</td>
+                    <td>109.63</td>
+                    <td>140.95</td> <!-- Add 1Y High % Diff here -->
+                    <td>298.39</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Shriram Finance Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>SHRIRAMFIN.NS</td>
+                    <td>1,823</td>
+                    <td>-2.39</td>
+                    <td>-2.39</td>
+                    <td>-2.39</td>
+                    <td>65.52</td>
+                    <td>91.43</td> <!-- Add 1Y High % Diff here -->
+                    <td>358.45</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Sona BLW Precision Forgings Ltd.</td>
+                    <td>Automobile and Auto Components</td>
+                    <td>SONACOMS.NS</td>
+                    <td>594</td>
+                    <td>-0.88</td>
+                    <td>-28.18</td>
+                    <td>-28.18</td>
+                    <td>51.15</td>
+                    <td>53.15</td> <!-- Add 1Y High % Diff here -->
+                    <td>104.47</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Steel Authority of India Ltd.</td>
+                    <td>Metals &amp; Mining</td>
+                    <td>SAIL.NS</td>
+                    <td>92</td>
+                    <td>-0.60</td>
+                    <td>-29.08</td>
+                    <td>-31.61</td>
+                    <td>29.47</td>
+                    <td>51.25</td> <!-- Add 1Y High % Diff here -->
+                    <td>421.70</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Sun TV Network Ltd.</td>
+                    <td>Media Entertainment &amp; Publication</td>
+                    <td>SUNTV.NS</td>
+                    <td>538</td>
+                    <td>-3.21</td>
+                    <td>-7.32</td>
+                    <td>-24.70</td>
+                    <td>36.72</td>
+                    <td>38.07</td> <!-- Add 1Y High % Diff here -->
+                    <td>122.41</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Syngene International Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>SYNGENE.NS</td>
+                    <td>776</td>
+                    <td>-1.83</td>
+                    <td>-1.83</td>
+                    <td>-1.83</td>
+                    <td>45.31</td>
+                    <td>52.58</td> <!-- Add 1Y High % Diff here -->
+                    <td>266.15</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>TVS Motor Company Ltd.</td>
+                    <td>Automobile and Auto Components</td>
+                    <td>TVSMOTOR.NS</td>
+                    <td>1,384</td>
+                    <td>-0.32</td>
+                    <td>-0.32</td>
+                    <td>-0.32</td>
+                    <td>66.16</td>
+                    <td>182.72</td> <!-- Add 1Y High % Diff here -->
+                    <td>486.20</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Tata Chemicals Ltd.</td>
+                    <td>Chemicals</td>
+                    <td>TATACHEM.NS</td>
+                    <td>977</td>
+                    <td>-18.14</td>
+                    <td>-18.14</td>
+                    <td>-18.14</td>
+                    <td>15.14</td>
+                    <td>40.21</td> <!-- Add 1Y High % Diff here -->
+                    <td>452.92</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Tata Communications Ltd.</td>
+                    <td>Telecommunication</td>
+                    <td>TATACOMM.NS</td>
+                    <td>1,611</td>
+                    <td>-2.93</td>
+                    <td>-2.93</td>
+                    <td>-2.93</td>
+                    <td>59.81</td>
+                    <td>90.75</td> <!-- Add 1Y High % Diff here -->
+                    <td>747.48</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Tata Elxsi Ltd.</td>
+                    <td>Information Technology</td>
+                    <td>TATAELXSI.NS</td>
+                    <td>7,228</td>
+                    <td>-32.29</td>
+                    <td>-32.29</td>
+                    <td>-32.29</td>
+                    <td>27.61</td>
+                    <td>78.17</td> <!-- Add 1Y High % Diff here -->
+                    <td>1400.71</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Tata Teleservices (Maharashtra) Ltd.</td>
+                    <td>Telecommunication</td>
+                    <td>TTML.NS</td>
+                    <td>82</td>
+                    <td>-44.70</td>
+                    <td>-71.60</td>
+                    <td>-71.60</td>
+                    <td>65.96</td>
+                    <td>151.60</td> <!-- Add 1Y High % Diff here -->
+                    <td>4477.78</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>The Ramco Cements Ltd.</td>
+                    <td>Construction Materials</td>
+                    <td>RAMCOCEM.NS</td>
+                    <td>897</td>
+                    <td>-5.81</td>
+                    <td>-20.44</td>
+                    <td>-20.44</td>
+                    <td>41.57</td>
+                    <td>56.55</td> <!-- Add 1Y High % Diff here -->
+                    <td>98.69</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Torrent Power Ltd.</td>
+                    <td>Power</td>
+                    <td>TORNTPOWER.NS</td>
+                    <td>611</td>
+                    <td>-17.83</td>
+                    <td>-17.83</td>
+                    <td>-17.83</td>
+                    <td>46.49</td>
+                    <td>51.99</td> <!-- Add 1Y High % Diff here -->
+                    <td>230.70</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Trent Ltd.</td>
+                    <td>Consumer Services</td>
+                    <td>TRENT.NS</td>
+                    <td>1,709</td>
+                    <td>-4.60</td>
+                    <td>-4.60</td>
+                    <td>-4.60</td>
+                    <td>48.22</td>
+                    <td>101.26</td> <!-- Add 1Y High % Diff here -->
+                    <td>447.15</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Trident Ltd.</td>
+                    <td>Textiles</td>
+                    <td>TRIDENT.NS</td>
+                    <td>33</td>
+                    <td>-20.36</td>
+                    <td>-52.12</td>
+                    <td>-52.12</td>
+                    <td>33.21</td>
+                    <td>99.99</td> <!-- Add 1Y High % Diff here -->
+                    <td>1039.19</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Tube Investments of India Ltd.</td>
+                    <td>Automobile and Auto Components</td>
+                    <td>TIINDIA.NS</td>
+                    <td>3,131</td>
+                    <td>-7.86</td>
+                    <td>-7.86</td>
+                    <td>-7.86</td>
+                    <td>58.20</td>
+                    <td>191.39</td> <!-- Add 1Y High % Diff here -->
+                    <td>1281.28</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Union Bank of India</td>
+                    <td>Financial Services</td>
+                    <td>UNIONBANK.NS</td>
+                    <td>88</td>
+                    <td>-8.71</td>
+                    <td>-8.71</td>
+                    <td>-8.71</td>
+                    <td>139.13</td>
+                    <td>184.06</td> <!-- Add 1Y High % Diff here -->
+                    <td>310.11</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>United Breweries Ltd.</td>
+                    <td>Fast Moving Consumer Goods</td>
+                    <td>UBL.NS</td>
+                    <td>1,480</td>
+                    <td>-18.04</td>
+                    <td>-18.04</td>
+                    <td>-18.04</td>
+                    <td>9.39</td>
+                    <td>17.70</td> <!-- Add 1Y High % Diff here -->
+                    <td>100.73</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Vodafone Idea Ltd.</td>
+                    <td>Telecommunication</td>
+                    <td>IDEA.NS</td>
+                    <td>7</td>
+                    <td>-21.78</td>
+                    <td>-52.98</td>
+                    <td>-78.50</td>
+                    <td>38.60</td>
+                    <td>73.63</td> <!-- Add 1Y High % Diff here -->
+                    <td>229.17</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Voltas Ltd.</td>
+                    <td>Consumer Durables</td>
+                    <td>VOLTAS.NS</td>
+                    <td>767</td>
+                    <td>-26.25</td>
+                    <td>-42.54</td>
+                    <td>-42.54</td>
+                    <td>5.17</td>
+                    <td>5.17</td> <!-- Add 1Y High % Diff here -->
+                    <td>86.68</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Whirlpool of India Ltd.</td>
+                    <td>Consumer Durables</td>
+                    <td>WHIRLPOOL.NS</td>
+                    <td>1,425</td>
+                    <td>-25.16</td>
+                    <td>-43.91</td>
+                    <td>-48.56</td>
+                    <td>17.12</td>
+                    <td>17.12</td> <!-- Add 1Y High % Diff here -->
+                    <td>17.12</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Yes Bank Ltd.</td>
+                    <td>Financial Services</td>
+                    <td>YESBANK.NS</td>
+                    <td>17</td>
+                    <td>-31.11</td>
+                    <td>-31.11</td>
+                    <td>-95.66</td>
+                    <td>24.91</td>
+                    <td>62.38</td> <!-- Add 1Y High % Diff here -->
+                    <td>201.77</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Zee Entertainment Enterprises Ltd.</td>
+                    <td>Media Entertainment &amp; Publication</td>
+                    <td>ZEEL.NS</td>
+                    <td>235</td>
+                    <td>-17.89</td>
+                    <td>-37.10</td>
+                    <td>-54.79</td>
+                    <td>38.54</td>
+                    <td>44.90</td> <!-- Add 1Y High % Diff here -->
+                    <td>112.30</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+                <tr>
+                    <td>Zydus Lifesciences Ltd.</td>
+                    <td>Healthcare</td>
+                    <td>ZYDUSLIFE.NS</td>
+                    <td>621</td>
+                    <td>-0.36</td>
+                    <td>-0.36</td>
+                    <td>-5.93</td>
+                    <td>84.18</td>
+                    <td>96.30</td> <!-- Add 1Y High % Diff here -->
+                    <td>217.62</td> <!-- Add 2Y High % Diff here -->
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <br><br>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div style="width: auto; max-width: 680px; padding: 0 15px;">
+            <span class="text-muted"> Copyright @ Anshuman Abhishek - 2023 </span>
+        </div>
+    </footer>
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add DataTables JavaScript -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize DataTables with pagination disabled
+            $('#stock-table').DataTable({
+                "paging": false
+            });
+        });
+    </script>
+</body>
+
+</html>
