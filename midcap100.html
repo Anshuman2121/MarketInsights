@@ -35,12 +35,27 @@
             margin: 0;
             padding: 0;
         }
+
+        .navbar-brand {
+            font-size: 3rem; /* Adjust the size as per your preference */
+            font-weight: bold;
+            color: #2a4d69;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 20px;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .float-left {
+            float: left;
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light justify-content-between flex-nowrap flex-row">
-        <div class="container">
+
             <a href="#" class="navbar-brand float-left">Market Insights </a>
             <ul class="nav navbar-nav flex-row float-right">
                 <li class="nav-item"><a class="nav-link pr-3" href="index.html">Nifty 50</a></li>
@@ -48,7 +63,6 @@
                 <li class="nav-item"><a class="nav-link pr-3" href="midcap100.html">Midcap 100</a></li>
                 <li class="nav-item"><a class="nav-link" href="chart.html">Chart</a></li>
             </ul>
-        </div>
     </nav>
     <script>
         // Get the "Chart" nav-link element
@@ -63,14 +77,16 @@
             window.location.href = 'chart.html';
         });
     </script>
+    <br>
 
-    <div class="container mt-4 text-monospace">
-        <h2>
+    <div class="container-fluid mt-4 text-monospace">
+        <h4>
             Explore Midcap 100 Stocks:
             <small class="text-muted">Click on any column to sort the table</small>
-        </h2>
+        </h4>
         <br><br>
 
+        <div class="table-responsive">
         <table class="table table-striped" id="stock-table">
             <thead class="thead-light">
                 <tr>
@@ -78,6 +94,7 @@
                     <th>Industry</th>
                     <th>Symbol</th>
                     <th>Current Price</th>
+                    <th>200 DMA Avg</th>
                     <th>1Y High % Diff</th>
                     <th>2Y High % Diff</th>
                     <th>5Y High % Diff</th>
@@ -93,12 +110,13 @@
                     <td>Financial Services</td>
                     <td>AUBANK.NS</td>
                     <td>695</td>
+                    <td>0.93</td>
                     <td>-12.41</td>
                     <td>-12.41</td>
                     <td>-12.41</td>
-                    <td>27.07</td>
-                    <td>50.70</td> <!-- Add 1Y High % Diff here -->
-                    <td>280.86</td> <!-- Add 2Y High % Diff here -->
+                    <td>27.07</td> 
+                    <td>50.70</td>
+                    <td>280.86</td>
                 </tr>
                 
                 <tr>
@@ -106,12 +124,13 @@
                     <td>Healthcare</td>
                     <td>ABBOTINDIA.NS</td>
                     <td>22,716</td>
+                    <td>3.02</td>
                     <td>-8.20</td>
                     <td>-8.20</td>
                     <td>-8.20</td>
-                    <td>25.94</td>
-                    <td>50.14</td> <!-- Add 1Y High % Diff here -->
-                    <td>247.56</td> <!-- Add 2Y High % Diff here -->
+                    <td>25.94</td> 
+                    <td>50.14</td>
+                    <td>247.56</td>
                 </tr>
                 
                 <tr>
@@ -119,12 +138,13 @@
                     <td>Power</td>
                     <td>ADANIPOWER.NS</td>
                     <td>316</td>
+                    <td>22.50</td>
                     <td>-22.76</td>
                     <td>-26.83</td>
                     <td>-26.83</td>
-                    <td>139.01</td>
-                    <td>238.09</td> <!-- Add 1Y High % Diff here -->
-                    <td>1275.87</td> <!-- Add 2Y High % Diff here -->
+                    <td>139.01</td> 
+                    <td>238.09</td>
+                    <td>1275.87</td>
                 </tr>
                 
                 <tr>
@@ -132,12 +152,13 @@
                     <td>Financial Services</td>
                     <td>ABCAPITAL.NS</td>
                     <td>172</td>
+                    <td>2.65</td>
                     <td>-13.42</td>
                     <td>-13.42</td>
                     <td>-13.42</td>
-                    <td>54.06</td>
-                    <td>101.58</td> <!-- Add 1Y High % Diff here -->
-                    <td>361.98</td> <!-- Add 2Y High % Diff here -->
+                    <td>54.06</td> 
+                    <td>101.58</td>
+                    <td>361.98</td>
                 </tr>
                 
                 <tr>
@@ -145,12 +166,13 @@
                     <td>Consumer Services</td>
                     <td>ABFRL.NS</td>
                     <td>214</td>
+                    <td>-4.42</td>
                     <td>-40.42</td>
                     <td>-40.42</td>
                     <td>-40.42</td>
+                    <td>16.16</td> 
                     <td>16.16</td>
-                    <td>16.16</td> <!-- Add 1Y High % Diff here -->
-                    <td>124.03</td> <!-- Add 2Y High % Diff here -->
+                    <td>124.03</td>
                 </tr>
                 
                 <tr>
@@ -158,12 +180,13 @@
                     <td>Healthcare</td>
                     <td>ALKEM.NS</td>
                     <td>3,533</td>
+                    <td>3.41</td>
                     <td>-16.71</td>
                     <td>-16.71</td>
                     <td>-16.71</td>
-                    <td>21.69</td>
-                    <td>26.68</td> <!-- Add 1Y High % Diff here -->
-                    <td>122.97</td> <!-- Add 2Y High % Diff here -->
+                    <td>21.69</td> 
+                    <td>26.68</td>
+                    <td>122.97</td>
                 </tr>
                 
                 <tr>
@@ -171,12 +194,13 @@
                     <td>Automobile and Auto Components</td>
                     <td>APOLLOTYRE.NS</td>
                     <td>375</td>
+                    <td>2.58</td>
                     <td>-14.95</td>
                     <td>-14.95</td>
                     <td>-14.95</td>
-                    <td>39.05</td>
-                    <td>131.23</td> <!-- Add 1Y High % Diff here -->
-                    <td>428.28</td> <!-- Add 2Y High % Diff here -->
+                    <td>39.05</td> 
+                    <td>131.23</td>
+                    <td>428.28</td>
                 </tr>
                 
                 <tr>
@@ -184,12 +208,13 @@
                     <td>Capital Goods</td>
                     <td>ASHOKLEY.NS</td>
                     <td>170</td>
+                    <td>8.85</td>
                     <td>-10.97</td>
                     <td>-10.97</td>
                     <td>-10.97</td>
-                    <td>32.23</td>
-                    <td>90.17</td> <!-- Add 1Y High % Diff here -->
-                    <td>431.12</td> <!-- Add 2Y High % Diff here -->
+                    <td>32.23</td> 
+                    <td>90.17</td>
+                    <td>431.12</td>
                 </tr>
                 
                 <tr>
@@ -197,12 +222,13 @@
                     <td>Capital Goods</td>
                     <td>ASTRAL.NS</td>
                     <td>1,823</td>
+                    <td>7.21</td>
                     <td>-11.40</td>
                     <td>-11.40</td>
                     <td>-11.40</td>
-                    <td>40.66</td>
-                    <td>54.13</td> <!-- Add 1Y High % Diff here -->
-                    <td>378.39</td> <!-- Add 2Y High % Diff here -->
+                    <td>40.66</td> 
+                    <td>54.13</td>
+                    <td>378.39</td>
                 </tr>
                 
                 <tr>
@@ -210,12 +236,13 @@
                     <td>Healthcare</td>
                     <td>AUROPHARMA.NS</td>
                     <td>874</td>
+                    <td>33.30</td>
                     <td>-5.94</td>
                     <td>-5.94</td>
                     <td>-16.00</td>
+                    <td>121.63</td> 
                     <td>121.63</td>
-                    <td>121.63</td> <!-- Add 1Y High % Diff here -->
-                    <td>210.84</td> <!-- Add 2Y High % Diff here -->
+                    <td>210.84</td>
                 </tr>
                 
                 <tr>
@@ -223,12 +250,13 @@
                     <td>Automobile and Auto Components</td>
                     <td>BALKRISIND.NS</td>
                     <td>2,566</td>
+                    <td>13.16</td>
                     <td>-2.66</td>
                     <td>-2.66</td>
                     <td>-3.95</td>
-                    <td>43.97</td>
-                    <td>53.55</td> <!-- Add 1Y High % Diff here -->
-                    <td>294.05</td> <!-- Add 2Y High % Diff here -->
+                    <td>43.97</td> 
+                    <td>53.55</td>
+                    <td>294.05</td>
                 </tr>
                 
                 <tr>
@@ -236,12 +264,13 @@
                     <td>Financial Services</td>
                     <td>BANDHANBNK.NS</td>
                     <td>221</td>
+                    <td>-4.97</td>
                     <td>-18.92</td>
                     <td>-36.27</td>
                     <td>-65.61</td>
+                    <td>22.30</td> 
                     <td>22.30</td>
-                    <td>22.30</td> <!-- Add 1Y High % Diff here -->
-                    <td>46.86</td> <!-- Add 2Y High % Diff here -->
+                    <td>46.86</td>
                 </tr>
                 
                 <tr>
@@ -249,12 +278,13 @@
                     <td>Financial Services</td>
                     <td>BANKINDIA.NS</td>
                     <td>90</td>
+                    <td>9.62</td>
                     <td>-20.21</td>
                     <td>-20.21</td>
                     <td>-20.21</td>
-                    <td>84.72</td>
-                    <td>141.24</td> <!-- Add 1Y High % Diff here -->
-                    <td>220.60</td> <!-- Add 2Y High % Diff here -->
+                    <td>84.72</td> 
+                    <td>141.24</td>
+                    <td>220.60</td>
                 </tr>
                 
                 <tr>
@@ -262,12 +292,13 @@
                     <td>Consumer Durables</td>
                     <td>BATAINDIA.NS</td>
                     <td>1,573</td>
+                    <td>0.43</td>
                     <td>-15.04</td>
                     <td>-28.05</td>
                     <td>-28.05</td>
+                    <td>14.84</td> 
                     <td>14.84</td>
-                    <td>14.84</td> <!-- Add 1Y High % Diff here -->
-                    <td>100.10</td> <!-- Add 2Y High % Diff here -->
+                    <td>100.10</td>
                 </tr>
                 
                 <tr>
@@ -275,12 +306,13 @@
                     <td>Capital Goods</td>
                     <td>BHARATFORG.NS</td>
                     <td>1,056</td>
+                    <td>19.45</td>
                     <td>-7.98</td>
                     <td>-7.98</td>
                     <td>-7.98</td>
-                    <td>43.00</td>
-                    <td>80.58</td> <!-- Add 1Y High % Diff here -->
-                    <td>420.13</td> <!-- Add 2Y High % Diff here -->
+                    <td>43.00</td> 
+                    <td>80.58</td>
+                    <td>420.13</td>
                 </tr>
                 
                 <tr>
@@ -288,12 +320,13 @@
                     <td>Capital Goods</td>
                     <td>BHEL.NS</td>
                     <td>117</td>
+                    <td>28.64</td>
                     <td>-20.92</td>
                     <td>-20.92</td>
                     <td>-20.92</td>
-                    <td>79.67</td>
-                    <td>187.39</td> <!-- Add 1Y High % Diff here -->
-                    <td>546.62</td> <!-- Add 2Y High % Diff here -->
+                    <td>79.67</td> 
+                    <td>187.39</td>
+                    <td>546.62</td>
                 </tr>
                 
                 <tr>
@@ -301,12 +334,13 @@
                     <td>Healthcare</td>
                     <td>BIOCON.NS</td>
                     <td>226</td>
+                    <td>-6.97</td>
                     <td>-22.41</td>
                     <td>-44.18</td>
                     <td>-52.99</td>
+                    <td>19.50</td> 
                     <td>19.50</td>
-                    <td>19.50</td> <!-- Add 1Y High % Diff here -->
-                    <td>19.50</td> <!-- Add 2Y High % Diff here -->
+                    <td>19.50</td>
                 </tr>
                 
                 <tr>
@@ -314,12 +348,13 @@
                     <td>Capital Goods</td>
                     <td>CGPOWER.NS</td>
                     <td>384</td>
+                    <td>7.46</td>
                     <td>-16.47</td>
                     <td>-16.47</td>
                     <td>-16.47</td>
-                    <td>56.84</td>
-                    <td>179.39</td> <!-- Add 1Y High % Diff here -->
-                    <td>8025.81</td> <!-- Add 2Y High % Diff here -->
+                    <td>56.84</td> 
+                    <td>179.39</td>
+                    <td>8025.81</td>
                 </tr>
                 
                 <tr>
@@ -327,12 +362,13 @@
                     <td>Information Technology</td>
                     <td>COFORGE.NS</td>
                     <td>4,915</td>
+                    <td>9.03</td>
                     <td>-14.70</td>
                     <td>-17.41</td>
                     <td>-17.41</td>
-                    <td>39.08</td>
-                    <td>56.47</td> <!-- Add 1Y High % Diff here -->
-                    <td>600.78</td> <!-- Add 2Y High % Diff here -->
+                    <td>39.08</td> 
+                    <td>56.47</td>
+                    <td>600.78</td>
                 </tr>
                 
                 <tr>
@@ -340,12 +376,13 @@
                     <td>Services</td>
                     <td>CONCOR.NS</td>
                     <td>700</td>
+                    <td>7.16</td>
                     <td>-13.48</td>
                     <td>-13.48</td>
                     <td>-13.48</td>
-                    <td>26.99</td>
-                    <td>30.32</td> <!-- Add 1Y High % Diff here -->
-                    <td>181.48</td> <!-- Add 2Y High % Diff here -->
+                    <td>26.99</td> 
+                    <td>30.32</td>
+                    <td>181.48</td>
                 </tr>
                 
                 <tr>
@@ -353,12 +390,13 @@
                     <td>Chemicals</td>
                     <td>COROMANDEL.NS</td>
                     <td>1,110</td>
+                    <td>14.74</td>
                     <td>-6.27</td>
                     <td>-6.27</td>
                     <td>-6.27</td>
-                    <td>35.09</td>
-                    <td>61.80</td> <!-- Add 1Y High % Diff here -->
-                    <td>251.57</td> <!-- Add 2Y High % Diff here -->
+                    <td>35.09</td> 
+                    <td>61.80</td>
+                    <td>251.57</td>
                 </tr>
                 
                 <tr>
@@ -366,12 +404,13 @@
                     <td>Consumer Durables</td>
                     <td>CROMPTON.NS</td>
                     <td>279</td>
+                    <td>-4.29</td>
                     <td>-25.20</td>
                     <td>-41.68</td>
                     <td>-43.90</td>
+                    <td>13.82</td> 
                     <td>13.82</td>
-                    <td>13.82</td> <!-- Add 1Y High % Diff here -->
-                    <td>65.79</td> <!-- Add 2Y High % Diff here -->
+                    <td>65.79</td>
                 </tr>
                 
                 <tr>
@@ -379,12 +418,13 @@
                     <td>Capital Goods</td>
                     <td>CUMMINSIND.NS</td>
                     <td>1,698</td>
+                    <td>2.23</td>
                     <td>-14.20</td>
                     <td>-14.20</td>
                     <td>-14.20</td>
-                    <td>46.42</td>
-                    <td>109.58</td> <!-- Add 1Y High % Diff here -->
-                    <td>551.67</td> <!-- Add 2Y High % Diff here -->
+                    <td>46.42</td> 
+                    <td>109.58</td>
+                    <td>551.67</td>
                 </tr>
                 
                 <tr>
@@ -392,12 +432,13 @@
                     <td>Construction Materials</td>
                     <td>DALBHARAT.NS</td>
                     <td>2,075</td>
+                    <td>2.40</td>
                     <td>-14.25</td>
                     <td>-14.25</td>
                     <td>-17.34</td>
-                    <td>38.23</td>
-                    <td>72.96</td> <!-- Add 1Y High % Diff here -->
-                    <td>423.12</td> <!-- Add 2Y High % Diff here -->
+                    <td>38.23</td> 
+                    <td>72.96</td>
+                    <td>423.12</td>
                 </tr>
                 
                 <tr>
@@ -405,12 +446,13 @@
                     <td>Chemicals</td>
                     <td>DEEPAKNTR.NS</td>
                     <td>2,019</td>
+                    <td>1.77</td>
                     <td>-14.90</td>
                     <td>-24.37</td>
                     <td>-32.63</td>
-                    <td>17.15</td>
-                    <td>21.02</td> <!-- Add 1Y High % Diff here -->
-                    <td>909.65</td> <!-- Add 2Y High % Diff here -->
+                    <td>17.15</td> 
+                    <td>21.02</td>
+                    <td>909.65</td>
                 </tr>
                 
                 <tr>
@@ -418,12 +460,13 @@
                     <td>Services</td>
                     <td>DELHIVERY.NS</td>
                     <td>415</td>
+                    <td>11.80</td>
                     <td>-8.16</td>
                     <td>-41.31</td>
                     <td>-41.31</td>
+                    <td>42.78</td> 
                     <td>42.78</td>
-                    <td>42.78</td> <!-- Add 1Y High % Diff here -->
-                    <td>42.78</td> <!-- Add 2Y High % Diff here -->
+                    <td>42.78</td>
                 </tr>
                 
                 <tr>
@@ -431,12 +474,13 @@
                     <td>Consumer Services</td>
                     <td>DEVYANI.NS</td>
                     <td>189</td>
+                    <td>5.65</td>
                     <td>-16.79</td>
                     <td>-16.79</td>
                     <td>-16.79</td>
-                    <td>41.32</td>
-                    <td>66.05</td> <!-- Add 1Y High % Diff here -->
-                    <td>76.01</td> <!-- Add 2Y High % Diff here -->
+                    <td>41.32</td> 
+                    <td>66.05</td>
+                    <td>76.01</td>
                 </tr>
                 
                 <tr>
@@ -444,12 +488,13 @@
                     <td>Consumer Durables</td>
                     <td>DIXON.NS</td>
                     <td>5,418</td>
+                    <td>40.28</td>
                     <td>-3.37</td>
                     <td>-7.41</td>
                     <td>-13.12</td>
+                    <td>112.35</td> 
                     <td>112.35</td>
-                    <td>112.35</td> <!-- Add 1Y High % Diff here -->
-                    <td>1641.09</td> <!-- Add 2Y High % Diff here -->
+                    <td>1641.09</td>
                 </tr>
                 
                 <tr>
@@ -457,12 +502,13 @@
                     <td>Healthcare</td>
                     <td>LALPATHLAB.NS</td>
                     <td>2,442</td>
+                    <td>14.93</td>
                     <td>-8.56</td>
                     <td>-37.43</td>
                     <td>-41.86</td>
+                    <td>39.32</td> 
                     <td>39.32</td>
-                    <td>39.32</td> <!-- Add 1Y High % Diff here -->
-                    <td>210.46</td> <!-- Add 2Y High % Diff here -->
+                    <td>210.46</td>
                 </tr>
                 
                 <tr>
@@ -470,12 +516,13 @@
                     <td>Capital Goods</td>
                     <td>ESCORTS.NS</td>
                     <td>3,134</td>
+                    <td>32.73</td>
                     <td>-8.89</td>
                     <td>-8.89</td>
                     <td>-8.89</td>
-                    <td>73.93</td>
-                    <td>140.62</td> <!-- Add 1Y High % Diff here -->
-                    <td>649.17</td> <!-- Add 2Y High % Diff here -->
+                    <td>73.93</td> 
+                    <td>140.62</td>
+                    <td>649.17</td>
                 </tr>
                 
                 <tr>
@@ -483,12 +530,13 @@
                     <td>Financial Services</td>
                     <td>FEDERALBNK.NS</td>
                     <td>143</td>
+                    <td>7.71</td>
                     <td>-6.03</td>
                     <td>-6.03</td>
                     <td>-6.03</td>
-                    <td>19.50</td>
-                    <td>87.08</td> <!-- Add 1Y High % Diff here -->
-                    <td>315.23</td> <!-- Add 2Y High % Diff here -->
+                    <td>19.50</td> 
+                    <td>87.08</td>
+                    <td>315.23</td>
                 </tr>
                 
                 <tr>
@@ -496,12 +544,13 @@
                     <td>Healthcare</td>
                     <td>FORTIS.NS</td>
                     <td>325</td>
+                    <td>9.42</td>
                     <td>-7.79</td>
                     <td>-7.79</td>
                     <td>-7.79</td>
-                    <td>32.81</td>
-                    <td>48.37</td> <!-- Add 1Y High % Diff here -->
-                    <td>192.94</td> <!-- Add 2Y High % Diff here -->
+                    <td>32.81</td> 
+                    <td>48.37</td>
+                    <td>192.94</td>
                 </tr>
                 
                 <tr>
@@ -509,12 +558,13 @@
                     <td>Healthcare</td>
                     <td>GLAND.NS</td>
                     <td>1,519</td>
+                    <td>13.38</td>
                     <td>-32.11</td>
                     <td>-62.61</td>
                     <td>-65.07</td>
+                    <td>76.46</td> 
                     <td>76.46</td>
-                    <td>76.46</td> <!-- Add 1Y High % Diff here -->
-                    <td>76.46</td> <!-- Add 2Y High % Diff here -->
+                    <td>76.46</td>
                 </tr>
                 
                 <tr>
@@ -522,12 +572,13 @@
                     <td>Realty</td>
                     <td>GODREJPROP.NS</td>
                     <td>1,630</td>
+                    <td>16.36</td>
                     <td>-7.85</td>
                     <td>-34.37</td>
                     <td>-37.25</td>
+                    <td>62.21</td> 
                     <td>62.21</td>
-                    <td>62.21</td> <!-- Add 1Y High % Diff here -->
-                    <td>224.68</td> <!-- Add 2Y High % Diff here -->
+                    <td>224.68</td>
                 </tr>
                 
                 <tr>
@@ -535,12 +586,13 @@
                     <td>Chemicals</td>
                     <td>FLUOROCHEM.NS</td>
                     <td>2,690</td>
+                    <td>-10.63</td>
                     <td>-32.49</td>
                     <td>-35.47</td>
                     <td>-35.47</td>
-                    <td>6.24</td>
-                    <td>57.89</td> <!-- Add 1Y High % Diff here -->
-                    <td>1140.76</td> <!-- Add 2Y High % Diff here -->
+                    <td>6.24</td> 
+                    <td>57.89</td>
+                    <td>1140.76</td>
                 </tr>
                 
                 <tr>
@@ -548,12 +600,13 @@
                     <td>Oil Gas &amp; Consumable Fuels</td>
                     <td>GUJGASLTD.NS</td>
                     <td>406</td>
+                    <td>-12.09</td>
                     <td>-23.44</td>
                     <td>-42.59</td>
                     <td>-47.13</td>
-                    <td>0.44</td>
-                    <td>2.69</td> <!-- Add 1Y High % Diff here -->
-                    <td>265.02</td> <!-- Add 2Y High % Diff here -->
+                    <td>0.44</td> 
+                    <td>2.69</td>
+                    <td>265.02</td>
                 </tr>
                 
                 <tr>
@@ -561,12 +614,13 @@
                     <td>Oil Gas &amp; Consumable Fuels</td>
                     <td>HINDPETRO.NS</td>
                     <td>249</td>
+                    <td>-2.02</td>
                     <td>-19.59</td>
                     <td>-25.83</td>
                     <td>-25.83</td>
-                    <td>23.98</td>
-                    <td>27.44</td> <!-- Add 1Y High % Diff here -->
-                    <td>115.48</td> <!-- Add 2Y High % Diff here -->
+                    <td>23.98</td> 
+                    <td>27.44</td>
+                    <td>115.48</td>
                 </tr>
                 
                 <tr>
@@ -574,12 +628,13 @@
                     <td>Metals &amp; Mining</td>
                     <td>HINDZINC.NS</td>
                     <td>303</td>
+                    <td>-0.20</td>
                     <td>-9.88</td>
                     <td>-9.88</td>
                     <td>-9.88</td>
-                    <td>35.96</td>
-                    <td>69.51</td> <!-- Add 1Y High % Diff here -->
-                    <td>347.75</td> <!-- Add 2Y High % Diff here -->
+                    <td>35.96</td> 
+                    <td>69.51</td>
+                    <td>347.75</td>
                 </tr>
                 
                 <tr>
@@ -587,12 +642,13 @@
                     <td>Capital Goods</td>
                     <td>HONAUT.NS</td>
                     <td>37,371</td>
+                    <td>-4.44</td>
                     <td>-15.16</td>
                     <td>-19.09</td>
                     <td>-24.75</td>
-                    <td>9.06</td>
-                    <td>24.36</td> <!-- Add 1Y High % Diff here -->
-                    <td>107.00</td> <!-- Add 2Y High % Diff here -->
+                    <td>9.06</td> 
+                    <td>24.36</td>
+                    <td>107.00</td>
                 </tr>
                 
                 <tr>
@@ -600,12 +656,13 @@
                     <td>Financial Services</td>
                     <td>IDFCFIRSTB.NS</td>
                     <td>86</td>
+                    <td>19.01</td>
                     <td>-14.15</td>
                     <td>-14.15</td>
                     <td>-14.15</td>
-                    <td>65.93</td>
-                    <td>198.62</td> <!-- Add 1Y High % Diff here -->
-                    <td>389.80</td> <!-- Add 2Y High % Diff here -->
+                    <td>65.93</td> 
+                    <td>198.62</td>
+                    <td>389.80</td>
                 </tr>
                 
                 <tr>
@@ -613,12 +670,13 @@
                     <td>Financial Services</td>
                     <td>INDIANB.NS</td>
                     <td>411</td>
+                    <td>29.07</td>
                     <td>-7.77</td>
                     <td>-7.77</td>
                     <td>-7.77</td>
-                    <td>86.06</td>
-                    <td>238.11</td> <!-- Add 1Y High % Diff here -->
-                    <td>980.74</td> <!-- Add 2Y High % Diff here -->
+                    <td>86.06</td> 
+                    <td>238.11</td>
+                    <td>980.74</td>
                 </tr>
                 
                 <tr>
@@ -626,12 +684,13 @@
                     <td>Consumer Services</td>
                     <td>INDHOTEL.NS</td>
                     <td>395</td>
+                    <td>9.02</td>
                     <td>-9.30</td>
                     <td>-9.30</td>
                     <td>-9.30</td>
-                    <td>41.72</td>
-                    <td>132.52</td> <!-- Add 1Y High % Diff here -->
-                    <td>546.09</td> <!-- Add 2Y High % Diff here -->
+                    <td>41.72</td> 
+                    <td>132.52</td>
+                    <td>546.09</td>
                 </tr>
                 
                 <tr>
@@ -639,12 +698,13 @@
                     <td>Financial Services</td>
                     <td>IRFC.NS</td>
                     <td>72</td>
+                    <td>78.30</td>
                     <td>-21.14</td>
                     <td>-21.14</td>
                     <td>-21.14</td>
-                    <td>249.91</td>
-                    <td>299.91</td> <!-- Add 1Y High % Diff here -->
-                    <td>299.91</td> <!-- Add 2Y High % Diff here -->
+                    <td>249.91</td> 
+                    <td>299.91</td>
+                    <td>299.91</td>
                 </tr>
                 
                 <tr>
@@ -652,12 +712,13 @@
                     <td>Oil Gas &amp; Consumable Fuels</td>
                     <td>IGL.NS</td>
                     <td>392</td>
+                    <td>-13.54</td>
                     <td>-23.93</td>
                     <td>-23.93</td>
                     <td>-31.55</td>
-                    <td>6.64</td>
-                    <td>27.59</td> <!-- Add 1Y High % Diff here -->
-                    <td>80.01</td> <!-- Add 2Y High % Diff here -->
+                    <td>6.64</td> 
+                    <td>27.59</td>
+                    <td>80.01</td>
                 </tr>
                 
                 <tr>
@@ -665,12 +726,13 @@
                     <td>Healthcare</td>
                     <td>IPCALAB.NS</td>
                     <td>998</td>
+                    <td>21.67</td>
                     <td>-1.01</td>
                     <td>-11.83</td>
                     <td>-27.17</td>
+                    <td>49.12</td> 
                     <td>49.12</td>
-                    <td>49.12</td> <!-- Add 1Y High % Diff here -->
-                    <td>222.69</td> <!-- Add 2Y High % Diff here -->
+                    <td>222.69</td>
                 </tr>
                 
                 <tr>
@@ -678,12 +740,13 @@
                     <td>Power</td>
                     <td>JSWENERGY.NS</td>
                     <td>376</td>
+                    <td>29.25</td>
                     <td>-16.18</td>
                     <td>-16.18</td>
                     <td>-16.18</td>
-                    <td>85.36</td>
-                    <td>108.37</td> <!-- Add 1Y High % Diff here -->
-                    <td>1058.61</td> <!-- Add 2Y High % Diff here -->
+                    <td>85.36</td> 
+                    <td>108.37</td>
+                    <td>1058.61</td>
                 </tr>
                 
                 <tr>
@@ -691,12 +754,13 @@
                     <td>Consumer Services</td>
                     <td>JUBLFOOD.NS</td>
                     <td>524</td>
+                    <td>9.01</td>
                     <td>-16.19</td>
                     <td>-35.34</td>
                     <td>-42.56</td>
+                    <td>27.68</td> 
                     <td>27.68</td>
-                    <td>27.68</td> <!-- Add 1Y High % Diff here -->
-                    <td>172.33</td> <!-- Add 2Y High % Diff here -->
+                    <td>172.33</td>
                 </tr>
                 
                 <tr>
@@ -704,12 +768,13 @@
                     <td>Financial Services</td>
                     <td>L&amp;TFH.NS</td>
                     <td>132</td>
+                    <td>23.35</td>
                     <td>-6.19</td>
                     <td>-6.19</td>
                     <td>-12.78</td>
-                    <td>70.86</td>
-                    <td>131.72</td> <!-- Add 1Y High % Diff here -->
-                    <td>222.78</td> <!-- Add 2Y High % Diff here -->
+                    <td>70.86</td> 
+                    <td>131.72</td>
+                    <td>222.78</td>
                 </tr>
                 
                 <tr>
@@ -717,12 +782,13 @@
                     <td>Information Technology</td>
                     <td>LTTS.NS</td>
                     <td>4,215</td>
+                    <td>7.87</td>
                     <td>-13.24</td>
                     <td>-27.87</td>
                     <td>-27.87</td>
-                    <td>32.08</td>
-                    <td>46.59</td> <!-- Add 1Y High % Diff here -->
-                    <td>341.17</td> <!-- Add 2Y High % Diff here -->
+                    <td>32.08</td> 
+                    <td>46.59</td>
+                    <td>341.17</td>
                 </tr>
                 
                 <tr>
@@ -730,12 +796,13 @@
                     <td>Financial Services</td>
                     <td>LICHSGFIN.NS</td>
                     <td>451</td>
+                    <td>16.65</td>
                     <td>-6.06</td>
                     <td>-6.06</td>
                     <td>-11.53</td>
-                    <td>46.33</td>
-                    <td>64.61</td> <!-- Add 1Y High % Diff here -->
-                    <td>171.61</td> <!-- Add 2Y High % Diff here -->
+                    <td>46.33</td> 
+                    <td>64.61</td>
+                    <td>171.61</td>
                 </tr>
                 
                 <tr>
@@ -743,12 +810,13 @@
                     <td>Healthcare</td>
                     <td>LAURUSLABS.NS</td>
                     <td>362</td>
+                    <td>3.54</td>
                     <td>-24.52</td>
                     <td>-41.70</td>
                     <td>-49.47</td>
+                    <td>30.43</td> 
                     <td>30.43</td>
-                    <td>30.43</td> <!-- Add 1Y High % Diff here -->
-                    <td>533.29</td> <!-- Add 2Y High % Diff here -->
+                    <td>533.29</td>
                 </tr>
                 
                 <tr>
@@ -756,12 +824,13 @@
                     <td>Healthcare</td>
                     <td>LUPIN.NS</td>
                     <td>1,168</td>
+                    <td>35.40</td>
                     <td>-3.90</td>
                     <td>-3.90</td>
                     <td>-6.37</td>
-                    <td>86.79</td>
-                    <td>102.46</td> <!-- Add 1Y High % Diff here -->
-                    <td>136.68</td> <!-- Add 2Y High % Diff here -->
+                    <td>86.79</td> 
+                    <td>102.46</td>
+                    <td>136.68</td>
                 </tr>
                 
                 <tr>
@@ -769,12 +838,13 @@
                     <td>Automobile and Auto Components</td>
                     <td>MRF.NS</td>
                     <td>108,977</td>
+                    <td>12.36</td>
                     <td>-3.93</td>
                     <td>-3.93</td>
                     <td>-3.93</td>
-                    <td>34.13</td>
-                    <td>73.59</td> <!-- Add 1Y High % Diff here -->
-                    <td>119.61</td> <!-- Add 2Y High % Diff here -->
+                    <td>34.13</td> 
+                    <td>73.59</td>
+                    <td>119.61</td>
                 </tr>
                 
                 <tr>
@@ -782,12 +852,13 @@
                     <td>Financial Services</td>
                     <td>M&amp;MFIN.NS</td>
                     <td>272</td>
+                    <td>0.92</td>
                     <td>-18.25</td>
                     <td>-18.25</td>
                     <td>-38.11</td>
-                    <td>48.17</td>
-                    <td>129.28</td> <!-- Add 1Y High % Diff here -->
-                    <td>287.68</td> <!-- Add 2Y High % Diff here -->
+                    <td>48.17</td> 
+                    <td>129.28</td>
+                    <td>287.68</td>
                 </tr>
                 
                 <tr>
@@ -795,12 +866,13 @@
                     <td>Healthcare</td>
                     <td>MANKIND.NS</td>
                     <td>1,749</td>
+                    <td>nan</td>
                     <td>-10.24</td>
                     <td>-10.24</td>
                     <td>-10.24</td>
+                    <td>40.85</td> 
                     <td>40.85</td>
-                    <td>40.85</td> <!-- Add 1Y High % Diff here -->
-                    <td>40.85</td> <!-- Add 2Y High % Diff here -->
+                    <td>40.85</td>
                 </tr>
                 
                 <tr>
@@ -808,12 +880,13 @@
                     <td>Financial Services</td>
                     <td>MFSL.NS</td>
                     <td>890</td>
+                    <td>16.11</td>
                     <td>-7.37</td>
                     <td>-17.63</td>
                     <td>-22.46</td>
+                    <td>48.58</td> 
                     <td>48.58</td>
-                    <td>48.58</td> <!-- Add 1Y High % Diff here -->
-                    <td>222.11</td> <!-- Add 2Y High % Diff here -->
+                    <td>222.11</td>
                 </tr>
                 
                 <tr>
@@ -821,12 +894,13 @@
                     <td>Healthcare</td>
                     <td>MAXHEALTH.NS</td>
                     <td>577</td>
+                    <td>11.48</td>
                     <td>-8.13</td>
                     <td>-8.13</td>
                     <td>-8.13</td>
-                    <td>41.50</td>
-                    <td>79.84</td> <!-- Add 1Y High % Diff here -->
-                    <td>495.79</td> <!-- Add 2Y High % Diff here -->
+                    <td>41.50</td> 
+                    <td>79.84</td>
+                    <td>495.79</td>
                 </tr>
                 
                 <tr>
@@ -834,12 +908,13 @@
                     <td>Automobile and Auto Components</td>
                     <td>MSUMI.NS</td>
                     <td>61</td>
+                    <td>10.24</td>
                     <td>-12.69</td>
                     <td>-12.69</td>
                     <td>-12.69</td>
-                    <td>37.58</td>
-                    <td>56.99</td> <!-- Add 1Y High % Diff here -->
-                    <td>56.99</td> <!-- Add 2Y High % Diff here -->
+                    <td>37.58</td> 
+                    <td>56.99</td>
+                    <td>56.99</td>
                 </tr>
                 
                 <tr>
@@ -847,12 +922,13 @@
                     <td>Information Technology</td>
                     <td>MPHASIS.NS</td>
                     <td>2,121</td>
+                    <td>3.24</td>
                     <td>-16.88</td>
                     <td>-34.99</td>
                     <td>-37.92</td>
+                    <td>31.20</td> 
                     <td>31.20</td>
-                    <td>31.20</td> <!-- Add 1Y High % Diff here -->
-                    <td>278.97</td> <!-- Add 2Y High % Diff here -->
+                    <td>278.97</td>
                 </tr>
                 
                 <tr>
@@ -860,12 +936,13 @@
                     <td>Power</td>
                     <td>NHPC.NS</td>
                     <td>50</td>
+                    <td>12.51</td>
                     <td>-11.17</td>
                     <td>-11.17</td>
                     <td>-11.17</td>
-                    <td>43.57</td>
-                    <td>97.87</td> <!-- Add 1Y High % Diff here -->
-                    <td>300.52</td> <!-- Add 2Y High % Diff here -->
+                    <td>43.57</td> 
+                    <td>97.87</td>
+                    <td>300.52</td>
                 </tr>
                 
                 <tr>
@@ -873,12 +950,13 @@
                     <td>Metals &amp; Mining</td>
                     <td>NMDC.NS</td>
                     <td>151</td>
+                    <td>29.42</td>
                     <td>-9.79</td>
                     <td>-9.79</td>
                     <td>-17.04</td>
+                    <td>73.27</td> 
                     <td>73.27</td>
-                    <td>73.27</td> <!-- Add 1Y High % Diff here -->
-                    <td>205.13</td> <!-- Add 2Y High % Diff here -->
+                    <td>205.13</td>
                 </tr>
                 
                 <tr>
@@ -886,12 +964,13 @@
                     <td>Chemicals</td>
                     <td>NAVINFLUOR.NS</td>
                     <td>3,530</td>
+                    <td>-18.57</td>
                     <td>-28.47</td>
                     <td>-28.47</td>
                     <td>-28.47</td>
-                    <td>0.43</td>
-                    <td>11.03</td> <!-- Add 1Y High % Diff here -->
-                    <td>533.72</td> <!-- Add 2Y High % Diff here -->
+                    <td>0.43</td> 
+                    <td>11.03</td>
+                    <td>533.72</td>
                 </tr>
                 
                 <tr>
@@ -899,12 +978,13 @@
                     <td>Realty</td>
                     <td>OBEROIRLTY.NS</td>
                     <td>1,084</td>
+                    <td>11.33</td>
                     <td>-10.13</td>
                     <td>-10.13</td>
                     <td>-10.13</td>
-                    <td>37.82</td>
-                    <td>50.58</td> <!-- Add 1Y High % Diff here -->
-                    <td>276.93</td> <!-- Add 2Y High % Diff here -->
+                    <td>37.82</td> 
+                    <td>50.58</td>
+                    <td>276.93</td>
                 </tr>
                 
                 <tr>
@@ -912,12 +992,13 @@
                     <td>Oil Gas &amp; Consumable Fuels</td>
                     <td>OIL.NS</td>
                     <td>307</td>
+                    <td>20.34</td>
                     <td>-9.43</td>
                     <td>-9.43</td>
                     <td>-9.43</td>
-                    <td>78.77</td>
-                    <td>107.16</td> <!-- Add 1Y High % Diff here -->
-                    <td>493.79</td> <!-- Add 2Y High % Diff here -->
+                    <td>78.77</td> 
+                    <td>107.16</td>
+                    <td>493.79</td>
                 </tr>
                 
                 <tr>
@@ -925,12 +1006,13 @@
                     <td>Financial Services</td>
                     <td>PAYTM.NS</td>
                     <td>923</td>
+                    <td>25.24</td>
                     <td>-7.47</td>
                     <td>-52.75</td>
                     <td>-52.75</td>
+                    <td>110.72</td> 
                     <td>110.72</td>
-                    <td>110.72</td> <!-- Add 1Y High % Diff here -->
-                    <td>110.72</td> <!-- Add 2Y High % Diff here -->
+                    <td>110.72</td>
                 </tr>
                 
                 <tr>
@@ -938,12 +1020,13 @@
                     <td>Information Technology</td>
                     <td>OFSS.NS</td>
                     <td>3,933</td>
+                    <td>11.50</td>
                     <td>-13.13</td>
                     <td>-13.13</td>
                     <td>-13.93</td>
+                    <td>45.25</td> 
                     <td>45.25</td>
-                    <td>45.25</td> <!-- Add 1Y High % Diff here -->
-                    <td>234.15</td> <!-- Add 2Y High % Diff here -->
+                    <td>234.15</td>
                 </tr>
                 
                 <tr>
@@ -951,12 +1034,13 @@
                     <td>Financial Services</td>
                     <td>POLICYBZR.NS</td>
                     <td>700</td>
+                    <td>10.55</td>
                     <td>-14.38</td>
                     <td>-52.35</td>
                     <td>-52.35</td>
+                    <td>96.63</td> 
                     <td>96.63</td>
-                    <td>96.63</td> <!-- Add 1Y High % Diff here -->
-                    <td>96.63</td> <!-- Add 2Y High % Diff here -->
+                    <td>96.63</td>
                 </tr>
                 
                 <tr>
@@ -964,12 +1048,13 @@
                     <td>Fast Moving Consumer Goods</td>
                     <td>PATANJALI.NS</td>
                     <td>1,261</td>
+                    <td>13.26</td>
                     <td>-13.31</td>
                     <td>-15.11</td>
                     <td>-16.32</td>
-                    <td>48.49</td>
-                    <td>81.65</td> <!-- Add 1Y High % Diff here -->
-                    <td>7749.71</td> <!-- Add 2Y High % Diff here -->
+                    <td>48.49</td> 
+                    <td>81.65</td>
+                    <td>7749.71</td>
                 </tr>
                 
                 <tr>
@@ -977,12 +1062,13 @@
                     <td>Information Technology</td>
                     <td>PERSISTENT.NS</td>
                     <td>5,806</td>
+                    <td>18.41</td>
                     <td>-3.79</td>
                     <td>-3.79</td>
                     <td>-3.79</td>
-                    <td>62.05</td>
-                    <td>89.34</td> <!-- Add 1Y High % Diff here -->
-                    <td>1319.25</td> <!-- Add 2Y High % Diff here -->
+                    <td>62.05</td> 
+                    <td>89.34</td>
+                    <td>1319.25</td>
                 </tr>
                 
                 <tr>
@@ -990,12 +1076,13 @@
                     <td>Oil Gas &amp; Consumable Fuels</td>
                     <td>PETRONET.NS</td>
                     <td>219</td>
+                    <td>-2.03</td>
                     <td>-13.56</td>
                     <td>-13.56</td>
                     <td>-13.56</td>
-                    <td>15.50</td>
-                    <td>23.66</td> <!-- Add 1Y High % Diff here -->
-                    <td>53.15</td> <!-- Add 2Y High % Diff here -->
+                    <td>15.50</td> 
+                    <td>23.66</td>
+                    <td>53.15</td>
                 </tr>
                 
                 <tr>
@@ -1003,12 +1090,13 @@
                     <td>Financial Services</td>
                     <td>PEL.NS</td>
                     <td>971</td>
+                    <td>12.80</td>
                     <td>-14.76</td>
                     <td>-64.00</td>
                     <td>-65.81</td>
+                    <td>60.34</td> 
                     <td>60.34</td>
-                    <td>60.34</td> <!-- Add 1Y High % Diff here -->
-                    <td>74.00</td> <!-- Add 2Y High % Diff here -->
+                    <td>74.00</td>
                 </tr>
                 
                 <tr>
@@ -1016,12 +1104,13 @@
                     <td>Capital Goods</td>
                     <td>POLYCAB.NS</td>
                     <td>5,154</td>
+                    <td>36.92</td>
                     <td>-6.18</td>
                     <td>-6.18</td>
                     <td>-6.18</td>
-                    <td>107.34</td>
-                    <td>155.33</td> <!-- Add 1Y High % Diff here -->
-                    <td>905.86</td> <!-- Add 2Y High % Diff here -->
+                    <td>107.34</td> 
+                    <td>155.33</td>
+                    <td>905.86</td>
                 </tr>
                 
                 <tr>
@@ -1029,12 +1118,13 @@
                     <td>Financial Services</td>
                     <td>POONAWALLA.NS</td>
                     <td>350</td>
+                    <td>2.81</td>
                     <td>-22.38</td>
                     <td>-22.38</td>
                     <td>-22.38</td>
-                    <td>45.01</td>
-                    <td>150.73</td> <!-- Add 1Y High % Diff here -->
-                    <td>2635.66</td> <!-- Add 2Y High % Diff here -->
+                    <td>45.01</td> 
+                    <td>150.73</td>
+                    <td>2635.66</td>
                 </tr>
                 
                 <tr>
@@ -1042,12 +1132,13 @@
                     <td>Financial Services</td>
                     <td>PFC.NS</td>
                     <td>244</td>
+                    <td>50.88</td>
                     <td>-5.44</td>
                     <td>-5.44</td>
                     <td>-5.44</td>
-                    <td>217.69</td>
-                    <td>251.81</td> <!-- Add 1Y High % Diff here -->
-                    <td>523.68</td> <!-- Add 2Y High % Diff here -->
+                    <td>217.69</td> 
+                    <td>251.81</td>
+                    <td>523.68</td>
                 </tr>
                 
                 <tr>
@@ -1055,12 +1146,13 @@
                     <td>Realty</td>
                     <td>PRESTIGE.NS</td>
                     <td>746</td>
+                    <td>44.40</td>
                     <td>-6.28</td>
                     <td>-6.28</td>
                     <td>-6.28</td>
-                    <td>91.36</td>
-                    <td>98.07</td> <!-- Add 1Y High % Diff here -->
-                    <td>463.65</td> <!-- Add 2Y High % Diff here -->
+                    <td>91.36</td> 
+                    <td>98.07</td>
+                    <td>463.65</td>
                 </tr>
                 
                 <tr>
@@ -1068,12 +1160,13 @@
                     <td>Financial Services</td>
                     <td>PNB.NS</td>
                     <td>69</td>
+                    <td>22.55</td>
                     <td>-16.59</td>
                     <td>-16.59</td>
                     <td>-27.83</td>
-                    <td>81.36</td>
-                    <td>157.04</td> <!-- Add 1Y High % Diff here -->
-                    <td>174.15</td> <!-- Add 2Y High % Diff here -->
+                    <td>81.36</td> 
+                    <td>157.04</td>
+                    <td>174.15</td>
                 </tr>
                 
                 <tr>
@@ -1081,12 +1174,13 @@
                     <td>Financial Services</td>
                     <td>RECLTD.NS</td>
                     <td>278</td>
+                    <td>69.59</td>
                     <td>-6.99</td>
                     <td>-6.99</td>
                     <td>-6.99</td>
-                    <td>235.74</td>
-                    <td>294.81</td> <!-- Add 1Y High % Diff here -->
-                    <td>552.77</td> <!-- Add 2Y High % Diff here -->
+                    <td>235.74</td> 
+                    <td>294.81</td>
+                    <td>552.77</td>
                 </tr>
                 
                 <tr>
@@ -1094,12 +1188,13 @@
                     <td>Financial Services</td>
                     <td>SHRIRAMFIN.NS</td>
                     <td>1,880</td>
+                    <td>23.91</td>
                     <td>-4.66</td>
                     <td>-4.66</td>
                     <td>-4.66</td>
-                    <td>65.00</td>
-                    <td>97.37</td> <!-- Add 1Y High % Diff here -->
-                    <td>372.66</td> <!-- Add 2Y High % Diff here -->
+                    <td>65.00</td> 
+                    <td>97.37</td>
+                    <td>372.66</td>
                 </tr>
                 
                 <tr>
@@ -1107,12 +1202,13 @@
                     <td>Automobile and Auto Components</td>
                     <td>SONACOMS.NS</td>
                     <td>508</td>
+                    <td>0.62</td>
                     <td>-18.69</td>
                     <td>-38.54</td>
                     <td>-38.54</td>
+                    <td>29.36</td> 
                     <td>29.36</td>
-                    <td>29.36</td> <!-- Add 1Y High % Diff here -->
-                    <td>74.99</td> <!-- Add 2Y High % Diff here -->
+                    <td>74.99</td>
                 </tr>
                 
                 <tr>
@@ -1120,12 +1216,13 @@
                     <td>Metals &amp; Mining</td>
                     <td>SAIL.NS</td>
                     <td>83</td>
+                    <td>-3.94</td>
                     <td>-19.17</td>
                     <td>-29.01</td>
                     <td>-37.89</td>
-                    <td>14.94</td>
-                    <td>37.36</td> <!-- Add 1Y High % Diff here -->
-                    <td>373.81</td> <!-- Add 2Y High % Diff here -->
+                    <td>14.94</td> 
+                    <td>37.36</td>
+                    <td>373.81</td>
                 </tr>
                 
                 <tr>
@@ -1133,12 +1230,13 @@
                     <td>Media Entertainment &amp; Publication</td>
                     <td>SUNTV.NS</td>
                     <td>631</td>
+                    <td>29.60</td>
                     <td>-5.24</td>
                     <td>-5.24</td>
                     <td>-5.24</td>
-                    <td>62.22</td>
-                    <td>63.82</td> <!-- Add 1Y High % Diff here -->
-                    <td>163.89</td> <!-- Add 2Y High % Diff here -->
+                    <td>62.22</td> 
+                    <td>63.82</td>
+                    <td>163.89</td>
                 </tr>
                 
                 <tr>
@@ -1146,12 +1244,13 @@
                     <td>Healthcare</td>
                     <td>SYNGENE.NS</td>
                     <td>693</td>
+                    <td>-0.17</td>
                     <td>-19.44</td>
                     <td>-19.44</td>
                     <td>-19.44</td>
-                    <td>27.29</td>
-                    <td>36.13</td> <!-- Add 1Y High % Diff here -->
-                    <td>226.67</td> <!-- Add 2Y High % Diff here -->
+                    <td>27.29</td> 
+                    <td>36.13</td>
+                    <td>226.67</td>
                 </tr>
                 
                 <tr>
@@ -1159,12 +1258,13 @@
                     <td>Automobile and Auto Components</td>
                     <td>TVSMOTOR.NS</td>
                     <td>1,585</td>
+                    <td>26.53</td>
                     <td>-1.98</td>
                     <td>-1.98</td>
                     <td>-1.98</td>
-                    <td>64.65</td>
-                    <td>212.46</td> <!-- Add 1Y High % Diff here -->
-                    <td>571.44</td> <!-- Add 2Y High % Diff here -->
+                    <td>64.65</td> 
+                    <td>212.46</td>
+                    <td>571.44</td>
                 </tr>
                 
                 <tr>
@@ -1172,12 +1272,13 @@
                     <td>Chemicals</td>
                     <td>TATACHEM.NS</td>
                     <td>978</td>
+                    <td>-0.93</td>
                     <td>-17.00</td>
                     <td>-18.02</td>
                     <td>-18.02</td>
-                    <td>13.59</td>
-                    <td>31.18</td> <!-- Add 1Y High % Diff here -->
-                    <td>453.71</td> <!-- Add 2Y High % Diff here -->
+                    <td>13.59</td> 
+                    <td>31.18</td>
+                    <td>453.71</td>
                 </tr>
                 
                 <tr>
@@ -1185,12 +1286,13 @@
                     <td>Telecommunication</td>
                     <td>TATACOMM.NS</td>
                     <td>1,615</td>
+                    <td>9.98</td>
                     <td>-17.48</td>
                     <td>-17.48</td>
                     <td>-17.48</td>
-                    <td>41.53</td>
-                    <td>91.20</td> <!-- Add 1Y High % Diff here -->
-                    <td>749.51</td> <!-- Add 2Y High % Diff here -->
+                    <td>41.53</td> 
+                    <td>91.20</td>
+                    <td>749.51</td>
                 </tr>
                 
                 <tr>
@@ -1198,12 +1300,13 @@
                     <td>Information Technology</td>
                     <td>TATAELXSI.NS</td>
                     <td>7,336</td>
+                    <td>6.12</td>
                     <td>-6.96</td>
                     <td>-31.28</td>
                     <td>-31.28</td>
-                    <td>29.51</td>
-                    <td>41.19</td> <!-- Add 1Y High % Diff here -->
-                    <td>1423.05</td> <!-- Add 2Y High % Diff here -->
+                    <td>29.51</td> 
+                    <td>41.19</td>
+                    <td>1423.05</td>
                 </tr>
                 
                 <tr>
@@ -1211,12 +1314,13 @@
                     <td>Telecommunication</td>
                     <td>TTML.NS</td>
                     <td>85</td>
+                    <td>12.79</td>
                     <td>-21.91</td>
                     <td>-70.64</td>
                     <td>-70.64</td>
-                    <td>71.60</td>
-                    <td>84.22</td> <!-- Add 1Y High % Diff here -->
-                    <td>4633.33</td> <!-- Add 2Y High % Diff here -->
+                    <td>71.60</td> 
+                    <td>84.22</td>
+                    <td>4633.33</td>
                 </tr>
                 
                 <tr>
@@ -1224,12 +1328,13 @@
                     <td>Construction Materials</td>
                     <td>RAMCOCEM.NS</td>
                     <td>975</td>
+                    <td>18.64</td>
                     <td>-4.02</td>
                     <td>-12.14</td>
                     <td>-13.15</td>
-                    <td>54.53</td>
-                    <td>70.89</td> <!-- Add 1Y High % Diff here -->
-                    <td>116.88</td> <!-- Add 2Y High % Diff here -->
+                    <td>54.53</td> 
+                    <td>70.89</td>
+                    <td>116.88</td>
                 </tr>
                 
                 <tr>
@@ -1237,12 +1342,13 @@
                     <td>Power</td>
                     <td>TORNTPOWER.NS</td>
                     <td>722</td>
+                    <td>23.49</td>
                     <td>-4.99</td>
                     <td>-4.99</td>
                     <td>-4.99</td>
-                    <td>73.16</td>
-                    <td>79.67</td> <!-- Add 1Y High % Diff here -->
-                    <td>278.39</td> <!-- Add 2Y High % Diff here -->
+                    <td>73.16</td> 
+                    <td>79.67</td>
+                    <td>278.39</td>
                 </tr>
                 
                 <tr>
@@ -1250,12 +1356,13 @@
                     <td>Consumer Services</td>
                     <td>TRENT.NS</td>
                     <td>1,991</td>
+                    <td>24.24</td>
                     <td>-8.84</td>
                     <td>-8.84</td>
                     <td>-8.84</td>
-                    <td>72.72</td>
-                    <td>105.87</td> <!-- Add 1Y High % Diff here -->
-                    <td>537.57</td> <!-- Add 2Y High % Diff here -->
+                    <td>72.72</td> 
+                    <td>105.87</td>
+                    <td>537.57</td>
                 </tr>
                 
                 <tr>
@@ -1263,12 +1370,13 @@
                     <td>Textiles</td>
                     <td>TRIDENT.NS</td>
                     <td>33</td>
+                    <td>1.48</td>
                     <td>-23.09</td>
                     <td>-51.17</td>
                     <td>-51.17</td>
+                    <td>35.83</td> 
                     <td>35.83</td>
-                    <td>35.83</td> <!-- Add 1Y High % Diff here -->
-                    <td>1061.63</td> <!-- Add 2Y High % Diff here -->
+                    <td>1061.63</td>
                 </tr>
                 
                 <tr>
@@ -1276,12 +1384,13 @@
                     <td>Automobile and Auto Components</td>
                     <td>TIINDIA.NS</td>
                     <td>2,907</td>
+                    <td>2.23</td>
                     <td>-22.19</td>
                     <td>-22.19</td>
                     <td>-22.19</td>
-                    <td>22.46</td>
-                    <td>115.21</td> <!-- Add 1Y High % Diff here -->
-                    <td>1054.15</td> <!-- Add 2Y High % Diff here -->
+                    <td>22.46</td> 
+                    <td>115.21</td>
+                    <td>1054.15</td>
                 </tr>
                 
                 <tr>
@@ -1289,12 +1398,13 @@
                     <td>Financial Services</td>
                     <td>UNIONBANK.NS</td>
                     <td>95</td>
+                    <td>21.42</td>
                     <td>-16.19</td>
                     <td>-16.19</td>
                     <td>-16.19</td>
-                    <td>102.47</td>
-                    <td>209.42</td> <!-- Add 1Y High % Diff here -->
-                    <td>357.63</td> <!-- Add 2Y High % Diff here -->
+                    <td>102.47</td> 
+                    <td>209.42</td>
+                    <td>357.63</td>
                 </tr>
                 
                 <tr>
@@ -1302,12 +1412,13 @@
                     <td>Fast Moving Consumer Goods</td>
                     <td>UBL.NS</td>
                     <td>1,629</td>
+                    <td>8.16</td>
                     <td>-9.38</td>
                     <td>-9.38</td>
                     <td>-9.38</td>
-                    <td>20.94</td>
-                    <td>30.13</td> <!-- Add 1Y High % Diff here -->
-                    <td>121.92</td> <!-- Add 2Y High % Diff here -->
+                    <td>20.94</td> 
+                    <td>30.13</td>
+                    <td>121.92</td>
                 </tr>
                 
                 <tr>
@@ -1315,12 +1426,13 @@
                     <td>Telecommunication</td>
                     <td>IDEA.NS</td>
                     <td>10</td>
+                    <td>37.76</td>
                     <td>-12.40</td>
                     <td>-34.82</td>
                     <td>-60.13</td>
+                    <td>92.11</td> 
                     <td>92.11</td>
-                    <td>92.11</td> <!-- Add 1Y High % Diff here -->
-                    <td>356.25</td> <!-- Add 2Y High % Diff here -->
+                    <td>356.25</td>
                 </tr>
                 
                 <tr>
@@ -1328,12 +1440,13 @@
                     <td>Consumer Durables</td>
                     <td>VOLTAS.NS</td>
                     <td>821</td>
+                    <td>0.00</td>
                     <td>-11.13</td>
                     <td>-38.07</td>
                     <td>-38.49</td>
+                    <td>12.59</td> 
                     <td>12.59</td>
-                    <td>12.59</td> <!-- Add 1Y High % Diff here -->
-                    <td>99.86</td> <!-- Add 2Y High % Diff here -->
+                    <td>99.86</td>
                 </tr>
                 
                 <tr>
@@ -1341,12 +1454,13 @@
                     <td>Consumer Durables</td>
                     <td>WHIRLPOOL.NS</td>
                     <td>1,643</td>
+                    <td>13.54</td>
                     <td>-5.16</td>
                     <td>-30.70</td>
                     <td>-40.51</td>
+                    <td>35.45</td> 
                     <td>35.45</td>
-                    <td>35.45</td> <!-- Add 1Y High % Diff here -->
-                    <td>35.45</td> <!-- Add 2Y High % Diff here -->
+                    <td>35.45</td>
                 </tr>
                 
                 <tr>
@@ -1354,12 +1468,13 @@
                     <td>Financial Services</td>
                     <td>YESBANK.NS</td>
                     <td>16</td>
+                    <td>-3.39</td>
                     <td>-33.94</td>
                     <td>-33.94</td>
                     <td>-94.13</td>
-                    <td>13.54</td>
-                    <td>35.12</td> <!-- Add 1Y High % Diff here -->
-                    <td>189.38</td> <!-- Add 2Y High % Diff here -->
+                    <td>13.54</td> 
+                    <td>35.12</td>
+                    <td>189.38</td>
                 </tr>
                 
                 <tr>
@@ -1367,12 +1482,13 @@
                     <td>Media Entertainment &amp; Publication</td>
                     <td>ZEEL.NS</td>
                     <td>249</td>
+                    <td>12.55</td>
                     <td>-14.10</td>
                     <td>-33.35</td>
                     <td>-48.90</td>
+                    <td>46.80</td> 
                     <td>46.80</td>
-                    <td>46.80</td> <!-- Add 1Y High % Diff here -->
-                    <td>124.95</td> <!-- Add 2Y High % Diff here -->
+                    <td>124.95</td>
                 </tr>
                 
                 <tr>
@@ -1380,35 +1496,35 @@
                     <td>Healthcare</td>
                     <td>ZYDUSLIFE.NS</td>
                     <td>570</td>
+                    <td>7.01</td>
                     <td>-14.71</td>
                     <td>-14.71</td>
                     <td>-14.71</td>
-                    <td>49.04</td>
-                    <td>83.52</td> <!-- Add 1Y High % Diff here -->
-                    <td>196.94</td> <!-- Add 2Y High % Diff here -->
+                    <td>49.04</td> 
+                    <td>83.52</td>
+                    <td>196.94</td>
                 </tr>
                 
             </tbody>
         </table>
     </div>
+</div>
     <br><br>
     <br><br>
     <div class="card-footer text-muted"></div>
 </div>
 </div>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1066313/t/1"></script>
-<footer class="footer">
-<div class="container">
-  <span class="text-muted"> Copyright @ Anshuman Abhishek - 2021 </span>
-  <span class="text-muted made-with-love" style="float: right;"> Made with ❤️ </span>
-</div>
-    <!-- Add jQuery -->
+<footer class="footer" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <span class="text-muted" style="flex: 1; text-align: left;"> Copyright @ Anshuman Abhishek - 2021 </span>
+    <span class="text-muted" style="flex: 1; text-align: center;"> Made with ❤️ </span>
+    <span class="text-muted" style="flex: 1; text-align: right;"> Last Update : 23rd Oct, 23 </span>
+</footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Add DataTables JavaScript -->
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function () {
-            // Initialize DataTables with pagination disabled
             $('#stock-table').DataTable({
                 "paging": false
             });
