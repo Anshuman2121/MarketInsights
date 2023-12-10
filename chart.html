@@ -63,6 +63,23 @@
             max-width: 45%;
             margin: 10px; 
         }  
+        .fullscreen-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .fullscreen-image img {
+            max-width: 90%;
+            max-height: 90%;
+        }
     </style>
 </head>
 
@@ -79,1231 +96,932 @@
      
 
     <h2>Nifty50 Index <small class="text-muted">Trend Channels</small></h2>
-
+    <h2><small class="text-muted">Click on chart to zoom in</small></h2>
     <br><br>
+
+    <div class="container-fluid mt-4 text-monospace">
+        <h4>
+            Nifty 100 Trend Channels:
+            <small class="text-muted">Click on any chart to zoom in</small>
+        </h4>
+        <br><br>
 
     <div class="row">
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">0_^NSEI</h5>
-                        <img src="static/images/0_%5ENSEI.png" alt="0_^NSEI" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">^NSEI</h5>
+                        <img src="static/images/%5ENSEI.png" alt="^NSEI" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">1_HDFCBANK.NS</h5>
-                        <img src="static/images/1_HDFCBANK.NS.png" alt="1_HDFCBANK.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">HDFCBANK.NS</h5>
+                        <img src="static/images/HDFCBANK.NS.png" alt="HDFCBANK.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">2_TATAPOWER.NS</h5>
-                        <img src="static/images/2_TATAPOWER.NS.png" alt="2_TATAPOWER.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TATAPOWER.NS</h5>
+                        <img src="static/images/TATAPOWER.NS.png" alt="TATAPOWER.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">3_ATGL.NS</h5>
-                        <img src="static/images/3_ATGL.NS.png" alt="3_ATGL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ATGL.NS</h5>
+                        <img src="static/images/ATGL.NS.png" alt="ATGL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">4_ADANIENT.NS</h5>
-                        <img src="static/images/4_ADANIENT.NS.png" alt="4_ADANIENT.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ADANIENT.NS</h5>
+                        <img src="static/images/ADANIENT.NS.png" alt="ADANIENT.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">5_ICICIBANK.NS</h5>
-                        <img src="static/images/5_ICICIBANK.NS.png" alt="5_ICICIBANK.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ICICIBANK.NS</h5>
+                        <img src="static/images/ICICIBANK.NS.png" alt="ICICIBANK.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">6_RELIANCE.NS</h5>
-                        <img src="static/images/6_RELIANCE.NS.png" alt="6_RELIANCE.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">RELIANCE.NS</h5>
+                        <img src="static/images/RELIANCE.NS.png" alt="RELIANCE.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">7_ADANIPORTS.NS</h5>
-                        <img src="static/images/7_ADANIPORTS.NS.png" alt="7_ADANIPORTS.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ADANIPORTS.NS</h5>
+                        <img src="static/images/ADANIPORTS.NS.png" alt="ADANIPORTS.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">8_ADANIENSOL.NS</h5>
-                        <img src="static/images/8_ADANIENSOL.NS.png" alt="8_ADANIENSOL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ADANIENSOL.NS</h5>
+                        <img src="static/images/ADANIENSOL.NS.png" alt="ADANIENSOL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">9_SBIN.NS</h5>
-                        <img src="static/images/9_SBIN.NS.png" alt="9_SBIN.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">SBIN.NS</h5>
+                        <img src="static/images/SBIN.NS.png" alt="SBIN.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">10_INFY.NS</h5>
-                        <img src="static/images/10_INFY.NS.png" alt="10_INFY.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">INFY.NS</h5>
+                        <img src="static/images/INFY.NS.png" alt="INFY.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">11_ADANIGREEN.NS</h5>
-                        <img src="static/images/11_ADANIGREEN.NS.png" alt="11_ADANIGREEN.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ADANIGREEN.NS</h5>
+                        <img src="static/images/ADANIGREEN.NS.png" alt="ADANIGREEN.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">12_ITC.NS</h5>
-                        <img src="static/images/12_ITC.NS.png" alt="12_ITC.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ITC.NS</h5>
+                        <img src="static/images/ITC.NS.png" alt="ITC.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">13_BAJFINANCE.NS</h5>
-                        <img src="static/images/13_BAJFINANCE.NS.png" alt="13_BAJFINANCE.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BAJFINANCE.NS</h5>
+                        <img src="static/images/BAJFINANCE.NS.png" alt="BAJFINANCE.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">14_LT.NS</h5>
-                        <img src="static/images/14_LT.NS.png" alt="14_LT.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">LT.NS</h5>
+                        <img src="static/images/LT.NS.png" alt="LT.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">15_AXISBANK.NS</h5>
-                        <img src="static/images/15_AXISBANK.NS.png" alt="15_AXISBANK.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">AXISBANK.NS</h5>
+                        <img src="static/images/AXISBANK.NS.png" alt="AXISBANK.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">16_HAL.NS</h5>
-                        <img src="static/images/16_HAL.NS.png" alt="16_HAL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">HAL.NS</h5>
+                        <img src="static/images/HAL.NS.png" alt="HAL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">17_BHARTIARTL.NS</h5>
-                        <img src="static/images/17_BHARTIARTL.NS.png" alt="17_BHARTIARTL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BHARTIARTL.NS</h5>
+                        <img src="static/images/BHARTIARTL.NS.png" alt="BHARTIARTL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">18_BANKBARODA.NS</h5>
-                        <img src="static/images/18_BANKBARODA.NS.png" alt="18_BANKBARODA.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BANKBARODA.NS</h5>
+                        <img src="static/images/BANKBARODA.NS.png" alt="BANKBARODA.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">19_TATAMOTORS.NS</h5>
-                        <img src="static/images/19_TATAMOTORS.NS.png" alt="19_TATAMOTORS.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TATAMOTORS.NS</h5>
+                        <img src="static/images/TATAMOTORS.NS.png" alt="TATAMOTORS.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">20_HCLTECH.NS</h5>
-                        <img src="static/images/20_HCLTECH.NS.png" alt="20_HCLTECH.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">HCLTECH.NS</h5>
+                        <img src="static/images/HCLTECH.NS.png" alt="HCLTECH.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">21_JSWSTEEL.NS</h5>
-                        <img src="static/images/21_JSWSTEEL.NS.png" alt="21_JSWSTEEL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">JSWSTEEL.NS</h5>
+                        <img src="static/images/JSWSTEEL.NS.png" alt="JSWSTEEL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">22_NTPC.NS</h5>
-                        <img src="static/images/22_NTPC.NS.png" alt="22_NTPC.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">NTPC.NS</h5>
+                        <img src="static/images/NTPC.NS.png" alt="NTPC.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">23_TCS.NS</h5>
-                        <img src="static/images/23_TCS.NS.png" alt="23_TCS.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TCS.NS</h5>
+                        <img src="static/images/TCS.NS.png" alt="TCS.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">24_MARUTI.NS</h5>
-                        <img src="static/images/24_MARUTI.NS.png" alt="24_MARUTI.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">MARUTI.NS</h5>
+                        <img src="static/images/MARUTI.NS.png" alt="MARUTI.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">25_TITAN.NS</h5>
-                        <img src="static/images/25_TITAN.NS.png" alt="25_TITAN.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TITAN.NS</h5>
+                        <img src="static/images/TITAN.NS.png" alt="TITAN.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">26_PNB.NS</h5>
-                        <img src="static/images/26_PNB.NS.png" alt="26_PNB.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">PNB.NS</h5>
+                        <img src="static/images/PNB.NS.png" alt="PNB.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">27_KOTAKBANK.NS</h5>
-                        <img src="static/images/27_KOTAKBANK.NS.png" alt="27_KOTAKBANK.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">KOTAKBANK.NS</h5>
+                        <img src="static/images/KOTAKBANK.NS.png" alt="KOTAKBANK.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">28_LICI.NS</h5>
-                        <img src="static/images/28_LICI.NS.png" alt="28_LICI.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">LICI.NS</h5>
+                        <img src="static/images/LICI.NS.png" alt="LICI.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">29_ZOMATO.NS</h5>
-                        <img src="static/images/29_ZOMATO.NS.png" alt="29_ZOMATO.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ZOMATO.NS</h5>
+                        <img src="static/images/ZOMATO.NS.png" alt="ZOMATO.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">30_POWERGRID.NS</h5>
-                        <img src="static/images/30_POWERGRID.NS.png" alt="30_POWERGRID.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">POWERGRID.NS</h5>
+                        <img src="static/images/POWERGRID.NS.png" alt="POWERGRID.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">31_COALINDIA.NS</h5>
-                        <img src="static/images/31_COALINDIA.NS.png" alt="31_COALINDIA.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">COALINDIA.NS</h5>
+                        <img src="static/images/COALINDIA.NS.png" alt="COALINDIA.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">32_BPCL.NS</h5>
-                        <img src="static/images/32_BPCL.NS.png" alt="32_BPCL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BPCL.NS</h5>
+                        <img src="static/images/BPCL.NS.png" alt="BPCL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">33_TATASTEEL.NS</h5>
-                        <img src="static/images/33_TATASTEEL.NS.png" alt="33_TATASTEEL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TATASTEEL.NS</h5>
+                        <img src="static/images/TATASTEEL.NS.png" alt="TATASTEEL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">34_LTIM.NS</h5>
-                        <img src="static/images/34_LTIM.NS.png" alt="34_LTIM.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">LTIM.NS</h5>
+                        <img src="static/images/LTIM.NS.png" alt="LTIM.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">35_HINDUNILVR.NS</h5>
-                        <img src="static/images/35_HINDUNILVR.NS.png" alt="35_HINDUNILVR.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">HINDUNILVR.NS</h5>
+                        <img src="static/images/HINDUNILVR.NS.png" alt="HINDUNILVR.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">36_INDUSINDBK.NS</h5>
-                        <img src="static/images/36_INDUSINDBK.NS.png" alt="36_INDUSINDBK.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">INDUSINDBK.NS</h5>
+                        <img src="static/images/INDUSINDBK.NS.png" alt="INDUSINDBK.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">37_IRCTC.NS</h5>
-                        <img src="static/images/37_IRCTC.NS.png" alt="37_IRCTC.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">IRCTC.NS</h5>
+                        <img src="static/images/IRCTC.NS.png" alt="IRCTC.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">38_BEL.NS</h5>
-                        <img src="static/images/38_BEL.NS.png" alt="38_BEL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BEL.NS</h5>
+                        <img src="static/images/BEL.NS.png" alt="BEL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">39_CANBK.NS</h5>
-                        <img src="static/images/39_CANBK.NS.png" alt="39_CANBK.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">CANBK.NS</h5>
+                        <img src="static/images/CANBK.NS.png" alt="CANBK.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">40_VEDL.NS</h5>
-                        <img src="static/images/40_VEDL.NS.png" alt="40_VEDL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">VEDL.NS</h5>
+                        <img src="static/images/VEDL.NS.png" alt="VEDL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">41_M&amp;M.NS</h5>
-                        <img src="static/images/41_M&amp;M.NS.png" alt="41_M&amp;M.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">M&amp;M.NS</h5>
+                        <img src="static/images/M&amp;M.NS.png" alt="M&amp;M.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">42_WIPRO.NS</h5>
-                        <img src="static/images/42_WIPRO.NS.png" alt="42_WIPRO.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">WIPRO.NS</h5>
+                        <img src="static/images/WIPRO.NS.png" alt="WIPRO.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">43_TECHM.NS</h5>
-                        <img src="static/images/43_TECHM.NS.png" alt="43_TECHM.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TECHM.NS</h5>
+                        <img src="static/images/TECHM.NS.png" alt="TECHM.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">44_CHOLAFIN.NS</h5>
-                        <img src="static/images/44_CHOLAFIN.NS.png" alt="44_CHOLAFIN.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">CHOLAFIN.NS</h5>
+                        <img src="static/images/CHOLAFIN.NS.png" alt="CHOLAFIN.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">45_ULTRACEMCO.NS</h5>
-                        <img src="static/images/45_ULTRACEMCO.NS.png" alt="45_ULTRACEMCO.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ULTRACEMCO.NS</h5>
+                        <img src="static/images/ULTRACEMCO.NS.png" alt="ULTRACEMCO.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">46_HEROMOTOCO.NS</h5>
-                        <img src="static/images/46_HEROMOTOCO.NS.png" alt="46_HEROMOTOCO.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">HEROMOTOCO.NS</h5>
+                        <img src="static/images/HEROMOTOCO.NS.png" alt="HEROMOTOCO.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">47_ASIANPAINT.NS</h5>
-                        <img src="static/images/47_ASIANPAINT.NS.png" alt="47_ASIANPAINT.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ASIANPAINT.NS</h5>
+                        <img src="static/images/ASIANPAINT.NS.png" alt="ASIANPAINT.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">48_IOC.NS</h5>
-                        <img src="static/images/48_IOC.NS.png" alt="48_IOC.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">IOC.NS</h5>
+                        <img src="static/images/IOC.NS.png" alt="IOC.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">49_GAIL.NS</h5>
-                        <img src="static/images/49_GAIL.NS.png" alt="49_GAIL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">GAIL.NS</h5>
+                        <img src="static/images/GAIL.NS.png" alt="GAIL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">50_AWL.NS</h5>
-                        <img src="static/images/50_AWL.NS.png" alt="50_AWL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">AWL.NS</h5>
+                        <img src="static/images/AWL.NS.png" alt="AWL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">51_DLF.NS</h5>
-                        <img src="static/images/51_DLF.NS.png" alt="51_DLF.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">DLF.NS</h5>
+                        <img src="static/images/DLF.NS.png" alt="DLF.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">52_APOLLOHOSP.NS</h5>
-                        <img src="static/images/52_APOLLOHOSP.NS.png" alt="52_APOLLOHOSP.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">APOLLOHOSP.NS</h5>
+                        <img src="static/images/APOLLOHOSP.NS.png" alt="APOLLOHOSP.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">53_SBILIFE.NS</h5>
-                        <img src="static/images/53_SBILIFE.NS.png" alt="53_SBILIFE.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">SBILIFE.NS</h5>
+                        <img src="static/images/SBILIFE.NS.png" alt="SBILIFE.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">54_INDIGO.NS</h5>
-                        <img src="static/images/54_INDIGO.NS.png" alt="54_INDIGO.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">INDIGO.NS</h5>
+                        <img src="static/images/INDIGO.NS.png" alt="INDIGO.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">55_BAJAJFINSV.NS</h5>
-                        <img src="static/images/55_BAJAJFINSV.NS.png" alt="55_BAJAJFINSV.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BAJAJFINSV.NS</h5>
+                        <img src="static/images/BAJAJFINSV.NS.png" alt="BAJAJFINSV.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">56_ONGC.NS</h5>
-                        <img src="static/images/56_ONGC.NS.png" alt="56_ONGC.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ONGC.NS</h5>
+                        <img src="static/images/ONGC.NS.png" alt="ONGC.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">57_SBICARD.NS</h5>
-                        <img src="static/images/57_SBICARD.NS.png" alt="57_SBICARD.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">SBICARD.NS</h5>
+                        <img src="static/images/SBICARD.NS.png" alt="SBICARD.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">58_DMART.NS</h5>
-                        <img src="static/images/58_DMART.NS.png" alt="58_DMART.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">DMART.NS</h5>
+                        <img src="static/images/DMART.NS.png" alt="DMART.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">59_AMBUJACEM.NS</h5>
-                        <img src="static/images/59_AMBUJACEM.NS.png" alt="59_AMBUJACEM.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">AMBUJACEM.NS</h5>
+                        <img src="static/images/AMBUJACEM.NS.png" alt="AMBUJACEM.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">60_SUNPHARMA.NS</h5>
-                        <img src="static/images/60_SUNPHARMA.NS.png" alt="60_SUNPHARMA.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">SUNPHARMA.NS</h5>
+                        <img src="static/images/SUNPHARMA.NS.png" alt="SUNPHARMA.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">61_TRENT.NS</h5>
-                        <img src="static/images/61_TRENT.NS.png" alt="61_TRENT.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TRENT.NS</h5>
+                        <img src="static/images/TRENT.NS.png" alt="TRENT.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">62_HINDALCO.NS</h5>
-                        <img src="static/images/62_HINDALCO.NS.png" alt="62_HINDALCO.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">HINDALCO.NS</h5>
+                        <img src="static/images/HINDALCO.NS.png" alt="HINDALCO.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">63_HDFCLIFE.NS</h5>
-                        <img src="static/images/63_HDFCLIFE.NS.png" alt="63_HDFCLIFE.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">HDFCLIFE.NS</h5>
+                        <img src="static/images/HDFCLIFE.NS.png" alt="HDFCLIFE.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">64_PIIND.NS</h5>
-                        <img src="static/images/64_PIIND.NS.png" alt="64_PIIND.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">PIIND.NS</h5>
+                        <img src="static/images/PIIND.NS.png" alt="PIIND.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">65_CIPLA.NS</h5>
-                        <img src="static/images/65_CIPLA.NS.png" alt="65_CIPLA.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">CIPLA.NS</h5>
+                        <img src="static/images/CIPLA.NS.png" alt="CIPLA.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">66_NESTLEIND.NS</h5>
-                        <img src="static/images/66_NESTLEIND.NS.png" alt="66_NESTLEIND.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">NESTLEIND.NS</h5>
+                        <img src="static/images/NESTLEIND.NS.png" alt="NESTLEIND.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">67_SHRIRAMFIN.NS</h5>
-                        <img src="static/images/67_SHRIRAMFIN.NS.png" alt="67_SHRIRAMFIN.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">SHRIRAMFIN.NS</h5>
+                        <img src="static/images/SHRIRAMFIN.NS.png" alt="SHRIRAMFIN.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">68_DIVISLAB.NS</h5>
-                        <img src="static/images/68_DIVISLAB.NS.png" alt="68_DIVISLAB.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">DIVISLAB.NS</h5>
+                        <img src="static/images/DIVISLAB.NS.png" alt="DIVISLAB.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">69_ZYDUSLIFE.NS</h5>
-                        <img src="static/images/69_ZYDUSLIFE.NS.png" alt="69_ZYDUSLIFE.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ZYDUSLIFE.NS</h5>
+                        <img src="static/images/ZYDUSLIFE.NS.png" alt="ZYDUSLIFE.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">70_JINDALSTEL.NS</h5>
-                        <img src="static/images/70_JINDALSTEL.NS.png" alt="70_JINDALSTEL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">JINDALSTEL.NS</h5>
+                        <img src="static/images/JINDALSTEL.NS.png" alt="JINDALSTEL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">71_BAJAJ-AUTO.NS</h5>
-                        <img src="static/images/71_BAJAJ-AUTO.NS.png" alt="71_BAJAJ-AUTO.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BAJAJ-AUTO.NS</h5>
+                        <img src="static/images/BAJAJ-AUTO.NS.png" alt="BAJAJ-AUTO.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">72_BRITANNIA.NS</h5>
-                        <img src="static/images/72_BRITANNIA.NS.png" alt="72_BRITANNIA.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BRITANNIA.NS</h5>
+                        <img src="static/images/BRITANNIA.NS.png" alt="BRITANNIA.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">73_EICHERMOT.NS</h5>
-                        <img src="static/images/73_EICHERMOT.NS.png" alt="73_EICHERMOT.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">EICHERMOT.NS</h5>
+                        <img src="static/images/EICHERMOT.NS.png" alt="EICHERMOT.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">74_MOTHERSON.NS</h5>
-                        <img src="static/images/74_MOTHERSON.NS.png" alt="74_MOTHERSON.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">MOTHERSON.NS</h5>
+                        <img src="static/images/MOTHERSON.NS.png" alt="MOTHERSON.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">75_VBL.NS</h5>
-                        <img src="static/images/75_VBL.NS.png" alt="75_VBL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">VBL.NS</h5>
+                        <img src="static/images/VBL.NS.png" alt="VBL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">76_DABUR.NS</h5>
-                        <img src="static/images/76_DABUR.NS.png" alt="76_DABUR.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">DABUR.NS</h5>
+                        <img src="static/images/DABUR.NS.png" alt="DABUR.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">77_DRREDDY.NS</h5>
-                        <img src="static/images/77_DRREDDY.NS.png" alt="77_DRREDDY.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">DRREDDY.NS</h5>
+                        <img src="static/images/DRREDDY.NS.png" alt="DRREDDY.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">78_UPL.NS</h5>
-                        <img src="static/images/78_UPL.NS.png" alt="78_UPL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">UPL.NS</h5>
+                        <img src="static/images/UPL.NS.png" alt="UPL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">79_NAUKRI.NS</h5>
-                        <img src="static/images/79_NAUKRI.NS.png" alt="79_NAUKRI.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">NAUKRI.NS</h5>
+                        <img src="static/images/NAUKRI.NS.png" alt="NAUKRI.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">80_GRASIM.NS</h5>
-                        <img src="static/images/80_GRASIM.NS.png" alt="80_GRASIM.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">GRASIM.NS</h5>
+                        <img src="static/images/GRASIM.NS.png" alt="GRASIM.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">81_ABB.NS</h5>
-                        <img src="static/images/81_ABB.NS.png" alt="81_ABB.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ABB.NS</h5>
+                        <img src="static/images/ABB.NS.png" alt="ABB.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">82_MCDOWELL-N.NS</h5>
-                        <img src="static/images/82_MCDOWELL-N.NS.png" alt="82_MCDOWELL-N.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">MCDOWELL-N.NS</h5>
+                        <img src="static/images/MCDOWELL-N.NS.png" alt="MCDOWELL-N.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">83_TVSMOTOR.NS</h5>
-                        <img src="static/images/83_TVSMOTOR.NS.png" alt="83_TVSMOTOR.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TVSMOTOR.NS</h5>
+                        <img src="static/images/TVSMOTOR.NS.png" alt="TVSMOTOR.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">84_MARICO.NS</h5>
-                        <img src="static/images/84_MARICO.NS.png" alt="84_MARICO.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">MARICO.NS</h5>
+                        <img src="static/images/MARICO.NS.png" alt="MARICO.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">85_SRF.NS</h5>
-                        <img src="static/images/85_SRF.NS.png" alt="85_SRF.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">SRF.NS</h5>
+                        <img src="static/images/SRF.NS.png" alt="SRF.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">86_TATAMTRDVR.NS</h5>
-                        <img src="static/images/86_TATAMTRDVR.NS.png" alt="86_TATAMTRDVR.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TATAMTRDVR.NS</h5>
+                        <img src="static/images/TATAMTRDVR.NS.png" alt="TATAMTRDVR.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">87_HAVELLS.NS</h5>
-                        <img src="static/images/87_HAVELLS.NS.png" alt="87_HAVELLS.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">HAVELLS.NS</h5>
+                        <img src="static/images/HAVELLS.NS.png" alt="HAVELLS.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">88_TATACONSUM.NS</h5>
-                        <img src="static/images/88_TATACONSUM.NS.png" alt="88_TATACONSUM.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TATACONSUM.NS</h5>
+                        <img src="static/images/TATACONSUM.NS.png" alt="TATACONSUM.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">89_COLPAL.NS</h5>
-                        <img src="static/images/89_COLPAL.NS.png" alt="89_COLPAL.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">COLPAL.NS</h5>
+                        <img src="static/images/COLPAL.NS.png" alt="COLPAL.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">90_SHREECEM.NS</h5>
-                        <img src="static/images/90_SHREECEM.NS.png" alt="90_SHREECEM.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">SHREECEM.NS</h5>
+                        <img src="static/images/SHREECEM.NS.png" alt="SHREECEM.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">91_SIEMENS.NS</h5>
-                        <img src="static/images/91_SIEMENS.NS.png" alt="91_SIEMENS.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">SIEMENS.NS</h5>
+                        <img src="static/images/SIEMENS.NS.png" alt="SIEMENS.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">92_GODREJCP.NS</h5>
-                        <img src="static/images/92_GODREJCP.NS.png" alt="92_GODREJCP.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">GODREJCP.NS</h5>
+                        <img src="static/images/GODREJCP.NS.png" alt="GODREJCP.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">93_PIDILITIND.NS</h5>
-                        <img src="static/images/93_PIDILITIND.NS.png" alt="93_PIDILITIND.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">PIDILITIND.NS</h5>
+                        <img src="static/images/PIDILITIND.NS.png" alt="PIDILITIND.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">94_BERGEPAINT.NS</h5>
-                        <img src="static/images/94_BERGEPAINT.NS.png" alt="94_BERGEPAINT.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BERGEPAINT.NS</h5>
+                        <img src="static/images/BERGEPAINT.NS.png" alt="BERGEPAINT.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">95_TORNTPHARM.NS</h5>
-                        <img src="static/images/95_TORNTPHARM.NS.png" alt="95_TORNTPHARM.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">TORNTPHARM.NS</h5>
+                        <img src="static/images/TORNTPHARM.NS.png" alt="TORNTPHARM.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">96_ICICIGI.NS</h5>
-                        <img src="static/images/96_ICICIGI.NS.png" alt="96_ICICIGI.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ICICIGI.NS</h5>
+                        <img src="static/images/ICICIGI.NS.png" alt="ICICIGI.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">97_MUTHOOTFIN.NS</h5>
-                        <img src="static/images/97_MUTHOOTFIN.NS.png" alt="97_MUTHOOTFIN.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">MUTHOOTFIN.NS</h5>
+                        <img src="static/images/MUTHOOTFIN.NS.png" alt="MUTHOOTFIN.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">98_ICICIPRULI.NS</h5>
-                        <img src="static/images/98_ICICIPRULI.NS.png" alt="98_ICICIPRULI.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">ICICIPRULI.NS</h5>
+                        <img src="static/images/ICICIPRULI.NS.png" alt="ICICIPRULI.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">99_BOSCHLTD.NS</h5>
-                        <img src="static/images/99_BOSCHLTD.NS.png" alt="99_BOSCHLTD.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BOSCHLTD.NS</h5>
+                        <img src="static/images/BOSCHLTD.NS.png" alt="BOSCHLTD.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">100_BAJAJHLDNG.NS</h5>
-                        <img src="static/images/100_BAJAJHLDNG.NS.png" alt="100_BAJAJHLDNG.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">BAJAJHLDNG.NS</h5>
+                        <img src="static/images/BAJAJHLDNG.NS.png" alt="BAJAJHLDNG.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
         
-            <div class="col-lg-6 mb-4"> <!-- Use col-lg-6 to show two boxes in one row on large screens -->
+            <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">101_PGHH.NS</h5>
-                        <img src="static/images/101_PGHH.NS.png" alt="101_PGHH.NS" class="img-fluid">
-                        <button type="button" class="btn btn-primary mt-2" onclick="openFullscreen(this.parentElement.parentElement)">
-                            Zoom
-                        </button>
+                    <div class="card-body text-center">
+                        <h5 class="card-title font-weight-bold" style="color: rgb(62, 61, 60); font-size: 1.5rem;">PGHH.NS</h5>
+                        <img src="static/images/PGHH.NS.png" alt="PGHH.NS" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -1312,9 +1030,32 @@
     <br><br>
     <br><br>
 
-    
-    <br><br>
-    <br><br>
+    <div class="fullscreen-image" id="fullscreenImage">
+        <img src="" alt="Full Screen Image" id="fullscreenImageSrc">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all images with the class 'img-fluid'
+            var images = document.querySelectorAll('.img-fluid');
+
+            // Add click event listener to each image
+            images.forEach(function (image) {
+                image.addEventListener('click', function () {
+                    // Set the source of the fullscreen image
+                    document.getElementById('fullscreenImageSrc').src = this.src;
+
+                    // Show the fullscreen image
+                    document.getElementById('fullscreenImage').style.display = 'flex';
+                });
+            });
+
+            // Add click event listener to close the fullscreen image
+            document.getElementById('fullscreenImage').addEventListener('click', function () {
+                this.style.display = 'none';
+            });
+        });
+    </script>    
     <div class="card-footer text-muted"></div>
     </div>
     </div>
